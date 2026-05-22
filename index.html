@@ -46,7 +46,7 @@ nav a:hover{color:var(--bk);}
 .f-btn.active{background:var(--bk);border-color:var(--bk);color:var(--wh);}
 .f-btn-all{background:var(--bk);border:1px solid var(--bk);border-radius:20px;color:var(--wh);font-family:'Montserrat',sans-serif;font-size:var(--t-xs);font-weight:600;padding:8px 20px;cursor:pointer;white-space:nowrap;transition:all .2s ease;}
 .f-btn-all:hover{opacity:.85;}
-.grid-ctrl{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.grid-ctrl{display:flex;align-items:center;gap:8px;flex-shrink:0;}
 .grid-ctrl-label{font-size:var(--t-xs);font-weight:600;color:var(--muted);white-space:nowrap;}
 .grid-slider{-webkit-appearance:none;appearance:none;width:80px;height:4px;border-radius:4px;background:#e5e5e5;outline:none;cursor:pointer;}
 .grid-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:var(--bk);cursor:pointer;}
@@ -175,6 +175,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   .ptbl-size{font-size:.6rem;}
   footer{padding:40px 20px;}
   nav a:not(.nav-wpp){display:none;}
+  .grid-ctrl{display:none;}
   .strip{padding:40px 20px;}
   .pedido-bar{width:95%;padding:12px 16px;bottom:16px;}
   .hero-produto{flex-direction:column;gap:1.5rem;}
@@ -227,6 +228,10 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   <nav>
     <a href="https://inovacaoentalhe.com" target="_blank">Site</a>
     <a href="https://instagram.com/inovacaoentalhe" target="_blank">Instagram</a>
+    <div class="grid-ctrl">
+      <span class="grid-ctrl-label" id="gridColLabel">⊞ 4</span>
+      <input type="range" class="grid-slider" id="gridSlider" min="2" max="6" value="4" oninput="setGrid(this.value)">
+    </div>
     <button class="nav-wpp" id="navWppBtn" onclick="enviarPedido()">🛒 Meu Pedido <span id="navCartCount" style="display:none;background:#fff;color:#25D366;border-radius:50%;width:18px;height:18px;font-size:.6rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;margin-left:4px;">0</span></button>
   </nav>
 </header>
@@ -256,10 +261,6 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     <button class="f-btn" onclick="filtrar('Facas › Conjuntos')">Facas › Conjuntos</button>
     <button class="f-btn" onclick="filtrar('Facas')">Facas</button>
     <button class="f-btn" onclick="filtrar('Troféus e Placas › Troféu Pescaria')">Troféus e Placas › Troféu Pescaria</button>
-  <div class="grid-ctrl">
-    <span class="grid-ctrl-label" id="gridColLabel">⊞ 4</span>
-    <input type="range" class="grid-slider" id="gridSlider" min="2" max="6" value="4" oninput="setGrid(this.value)">
-  </div>
   <button class="btn-print" onclick="window.print()" title="Imprimir catálogo">🖨️ Imprimir</button>
 </div>
 
