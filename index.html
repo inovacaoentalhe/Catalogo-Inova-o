@@ -3634,20 +3634,34 @@ document.addEventListener("DOMContentLoaded",function(){
   });
 });
 var catAtiva="";
+var verMaisLimit=12;
 function norm(s){return(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();}
 function render(){
   var busca=norm(document.getElementById("searchInput").value);
-  var cards=document.querySelectorAll(".card"),v=0;
+  var cards=document.querySelectorAll(".card"),matched=[];
+  cards.forEach(function(c){c.style.display="none";});
   cards.forEach(function(c){
     var ok=(!catAtiva||c.dataset.cat===catAtiva)&&(!busca||norm(c.dataset.nome).includes(busca)||norm(c.dataset.sku).includes(busca));
-    c.style.display=ok?"":"none";if(ok)v++;
+    if(ok)matched.push(c);
   });
-  var g=document.getElementById("grid"),e=g.querySelector(".empty-dyn");
-  if(v===0&&cards.length>0){if(!e){var d=document.createElement("div");d.className="empty empty-dyn";d.innerHTML='<div class="empty-icon">🔍</div><p>Nenhum produto encontrado.</p>';g.appendChild(d);}}
+  matched.forEach(function(c,i){if(i<verMaisLimit)c.style.display="";});
+  var g=document.getElementById("grid");
+  var e=g.querySelector(".empty-dyn");
+  if(matched.length===0&&cards.length>0){if(!e){var d=document.createElement("div");d.className="empty empty-dyn";d.innerHTML='<div class="empty-icon">🔍</div><p>Nenhum produto encontrado.</p>';g.appendChild(d);}}
   else if(e){e.remove();}
+  var vm=g.querySelector(".ver-mais-wrap");
+  if(matched.length>verMaisLimit){
+    if(!vm){vm=document.createElement("div");vm.className="ver-mais-wrap";vm.innerHTML='<button class="btn-ver-mais" onclick="verMais()"></button>';g.appendChild(vm);}
+    vm.querySelector("button").textContent="Ver mais ("+(matched.length-verMaisLimit)+" restantes)";
+    vm.style.display="";
+  } else {
+    if(vm)vm.style.display="none";
+  }
 }
+function verMais(){verMaisLimit+=12;render();}
 function filtrar(cat){
   catAtiva=cat.toLowerCase();
+  verMaisLimit=12;
   document.querySelectorAll(".f-btn").forEach(function(b){b.classList.toggle("active",b.textContent.toLowerCase()===catAtiva);});
   var allBtn=document.querySelector(".f-btn-all");
   if(allBtn)allBtn.classList.toggle("active",catAtiva==="");
