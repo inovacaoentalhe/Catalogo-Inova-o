@@ -22,7 +22,7 @@ nav a:hover{color:var(--bk);}
 .nav-wpp{background:var(--wpp);color:#fff !important;padding:10px 20px;font-weight:700 !important;border-radius:12px;display:inline-flex;align-items:center;gap:6px;transition:all .3s ease;border:none;cursor:pointer;}
 .nav-wpp:hover{transform:scale(1.02);box-shadow:0 4px 10px rgba(37,211,102,0.2);}
 /* HERO */
-.hero{background:var(--wh);padding:60px 5%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
+.hero{background:var(--wh);padding:28px 5%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;}
 .hero-title{font-size:var(--t-hero);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--bk);}
 .hero-title em{font-style:normal;color:var(--y);}
 .hero-count{font-size:var(--t-sm);font-weight:600;color:var(--muted);}
@@ -35,7 +35,7 @@ nav a:hover{color:var(--bk);}
 .btn-wpp-hero{display:inline-flex;align-items:center;gap:8px;background:var(--wpp);color:#fff;padding:14px 28px;border-radius:14px;font-weight:700;font-size:var(--t-sm);text-decoration:none;width:fit-content;}
 .btn-wpp-hero:hover{background:var(--wpp-hover);}
 /* TOOLBAR */
-.toolbar{background:var(--wh);border-bottom:1px solid var(--border);padding:15px 5%;display:flex;align-items:center;gap:12px;overflow-x:auto;position:sticky;top:64px;z-index:100;}
+.toolbar{background:var(--wh);border-bottom:1px solid var(--border);padding:12px 5%;display:flex;align-items:center;gap:8px;flex-wrap:wrap;overflow-x:visible;position:sticky;top:64px;z-index:100;}
 .search-wrap{position:relative;min-width:200px;max-width:260px;flex:1;}
 .s-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:var(--t-base);pointer-events:none;}
 .search-input{width:100%;padding:12px 15px 12px 40px;border:none;border-radius:12px;font-family:'Montserrat',sans-serif;font-size:var(--t-sm);color:var(--text);outline:none;background:#f2f2f2;transition:all .2s ease;}
@@ -242,7 +242,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
 <div class="hero">
   <div>
     <div class="hero-title">Inovação Entalhe<br><em>Produtos com identidade.</em></div>
-    <div class="hero-count">104 produtos disponíveis</div>
+    <div class="hero-count">110 produtos disponíveis</div>
   </div>
 </div>
 
@@ -264,6 +264,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     <button class="f-btn" onclick="filtrar('MDF e Outros')">MDF e Outros</button>
     <button class="f-btn" onclick="filtrar('Decoração')">Decoração</button>
     <button class="f-btn" onclick="filtrar('Troféus e Placas › Troféu Pescaria')">Troféus e Placas › Troféu Pescaria</button>
+    <button class="f-btn" onclick="filtrar('Canivetes')">Canivetes</button>
   <button class="btn-print" onclick="window.print()" title="Imprimir catálogo">🖨️ Imprimir</button>
 </div>
 
@@ -438,7 +439,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   <div class="card" data-nome="tábua de churrasco brasil" data-cat="linha churrasco" data-sku="tbr-0001">
     <div class="card-img" onclick="abrirGaleria(5)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBR-0001-0-1777463085039.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBR-0001-1-1777463095663.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBR-0001-2-1777463103471.jpg"]' data-nome="Tábua De Churrasco BRASIL">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBR-0001-0-1777463085039.jpg" alt="Tábua De Churrasco BRASIL">
-      
+      <div class="card-tags-overlay"><span class="tag tag-destaque">Destaque</span></div>
       <span class="cod">cod. TBR-0001</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
@@ -468,11 +469,11 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="tábua de churrasco rustik" data-cat="linha churrasco" data-sku="ttr-4869">
+  <div class="card" data-nome="tábua de churrasco rustik" data-cat="linha churrasco" data-sku="ttr-4868">
     <div class="card-img" onclick="abrirGaleria(6)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4869-0-1777290330617.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4869-1-1777290641060.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4869-2-1777290732668.jpg"]' data-nome="Tábua De Churrasco RUSTIK">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4869-0-1777290330617.jpg" alt="Tábua De Churrasco RUSTIK">
       
-      <span class="cod">cod. TTR-4869</span>
+      <span class="cod">cod. TTR-4868</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
@@ -488,15 +489,19 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
           <td class="ptbl-size">Pers. Simples</td>
           <td class="ptbl-avulso">R$ 183,90</td>
           <td class="ptbl-atac">R$ 156,90<span class="atac-min"> +10un</span></td>
-        </tr><tr class="ptbl-last">
+        </tr><tr class="">
           <td class="ptbl-size">Resinada Top</td>
           <td class="ptbl-avulso">R$ 234,90</td>
           <td class="ptbl-atac">R$ 205,00<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">Caixa Papel</td>
+          <td class="ptbl-avulso">R$ 34,90</td>
+          <td class="ptbl-atac">R$ 29,90<span class="atac-min"> +10un</span></td>
         </tr>
       </table>
       </div>
       
-      <button class="btn-cart" data-id="954d1e58-ef21-4e08-bd99-6d5b70f6a9e8" data-nome="Tábua De Churrasco RUSTIK" data-sku="TTR-4869" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="954d1e58-ef21-4e08-bd99-6d5b70f6a9e8" data-nome="Tábua De Churrasco RUSTIK" data-sku="TTR-4868" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
@@ -666,11 +671,11 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="kit rustik light (tábua + faca)" data-cat="linha churrasco" data-sku="lt-4868">
+  <div class="card" data-nome="kit rustik light (tábua + faca)" data-cat="linha churrasco" data-sku="kit-48683">
     <div class="card-img" onclick="abrirGaleria(12)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KTR-4868-0-1777295863575.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/LT-4868-1-1777296270474.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/LT-4868-2-1777296596370.jpg"]' data-nome="Kit RUSTIK Light (Tábua + Faca)">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KTR-4868-0-1777295863575.jpg" alt="Kit RUSTIK Light (Tábua + Faca)">
       
-      <span class="cod">cod. LT-4868</span>
+      <span class="cod">cod. KIT-48683</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
@@ -694,16 +699,16 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </table>
       </div>
       
-      <button class="btn-cart" data-id="685dc772-f251-4731-aa10-67df134ce855" data-nome="Kit RUSTIK Light (Tábua + Faca)" data-sku="LT-4868" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="685dc772-f251-4731-aa10-67df134ce855" data-nome="Kit RUSTIK Light (Tábua + Faca)" data-sku="KIT-48683" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
-  <div class="card" data-nome="kit rustik luxo (tábua + faca + caixa)" data-cat="linha churrasco" data-sku="ktt-4869">
+  <div class="card" data-nome="kit rustik luxo (tábua + faca + caixa)" data-cat="linha churrasco" data-sku="kit-48682">
     <div class="card-img" onclick="abrirGaleria(13)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KTT-4869-0-1777295040891.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KTT-4869-1-1777295168606.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KTT-4869-2-1777295194119.jpg"]' data-nome="Kit RUSTIK Luxo (Tábua + Faca + Caixa)">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KTT-4869-0-1777295040891.jpg" alt="Kit RUSTIK Luxo (Tábua + Faca + Caixa)">
       
-      <span class="cod">cod. KTT-4869</span>
+      <span class="cod">cod. KIT-48682</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
@@ -717,48 +722,19 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
         <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
         <tr class="ptbl-last">
           <td class="ptbl-size">Resinada Top</td>
-          <td class="ptbl-avulso">R$ 649,90</td>
+          <td class="ptbl-avulso">R$ 593,90</td>
           <td class="ptbl-atac">R$ 552,90<span class="atac-min"> +10un</span></td>
         </tr>
       </table>
       </div>
       
-      <button class="btn-cart" data-id="e438f4a6-31c9-4117-897f-595ea125fc92" data-nome="Kit RUSTIK Luxo (Tábua + Faca + Caixa)" data-sku="KTT-4869" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
-  <div class="card" data-nome="kit rustik top + petisqueira (tábua + petisq + caixa)" data-cat="linha churrasco" data-sku="4869">
-    <div class="card-img" onclick="abrirGaleria(14)" data-imgs='[]' data-nome="Kit RUSTIK Top + Petisqueira (Tábua + Petisq + Caixa)">
-      <div class="img-ph">📦</div>
-      
-      <span class="cod">cod. 4869</span>
-      
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Linha Churrasco</div>
-      <div class="card-name">Kit RUSTIK Top + Petisqueira (Tábua + Petisq + Caixa)</div>
-      <ul class="card-desc"><li>Em madeira Teca ± 28x48x2,1cm</li><li>Lateral Resinada, acabamento e selagem atóxica</li><li>+ Petisqueira 28x28</li><li>Caixa em MDF crú gravado à laser ou impressão color</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        <table class="price-tbl">
-        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="ptbl-last">
-          <td class="ptbl-size">Petisqueira + 4 Garf.</td>
-          <td class="ptbl-avulso">R$ 411,90</td>
-          <td class="ptbl-atac">R$ 350,90<span class="atac-min"> +10un</span></td>
-        </tr>
-      </table>
-      </div>
-      
-      <button class="btn-cart" data-id="d86a3ad4-8ff2-4aa6-b976-cfe3b5240b65" data-nome="Kit RUSTIK Top + Petisqueira (Tábua + Petisq + Caixa)" data-sku="4869" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="e438f4a6-31c9-4117-897f-595ea125fc92" data-nome="Kit RUSTIK Luxo (Tábua + Faca + Caixa)" data-sku="KIT-48682" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
   <div class="card" data-nome="kit churrasco - 3 em 1" data-cat="linha churrasco" data-sku="kic-001">
-    <div class="card-img" onclick="abrirGaleria(15)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-0-1777583831587.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-1-1777583845176.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-2-1777583881915.jpg"]' data-nome="Kit Churrasco - 3 em 1">
+    <div class="card-img" onclick="abrirGaleria(14)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-0-1777583831587.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-1-1777583845176.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-2-1777583881915.jpg"]' data-nome="Kit Churrasco - 3 em 1">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/KIC-001-0-1777583831587.jpg" alt="Kit Churrasco - 3 em 1">
       
       <span class="cod">cod. KIC-001</span>
@@ -795,7 +771,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="porta espeto caixinha" data-cat="linha churrasco" data-sku="8520">
-    <div class="card-img" onclick="abrirGaleria(16)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-0-1778934605782.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-1-1778934935764.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-2-1778935323494.jpg"]' data-nome="Porta Espeto Caixinha">
+    <div class="card-img" onclick="abrirGaleria(15)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-0-1778934605782.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-1-1778934935764.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-2-1778935323494.jpg"]' data-nome="Porta Espeto Caixinha">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/8520-0-1778934605782.jpg" alt="Porta Espeto Caixinha">
       
       <span class="cod">cod. 8520</span>
@@ -822,7 +798,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="porta copos promocional em compensado" data-cat="linha churrasco" data-sku="pcp-0003">
-    <div class="card-img" onclick="abrirGaleria(17)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-0-1778607919953.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-1-1778607926825.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-2-1778607973726.jpg"]' data-nome="Porta Copos Promocional em Compensado">
+    <div class="card-img" onclick="abrirGaleria(16)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-0-1778607919953.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-1-1778607926825.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-2-1778607973726.jpg"]' data-nome="Porta Copos Promocional em Compensado">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PCP-0003-0-1778607919953.jpg" alt="Porta Copos Promocional em Compensado">
       
       <span class="cod">cod. PCP-0003</span>
@@ -863,7 +839,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="porta copos" data-cat="linha churrasco" data-sku="6184">
-    <div class="card-img" onclick="abrirGaleria(18)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-0-1777408379368.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-1-1777408389484.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-2-1777408407280.jpg"]' data-nome="Porta Copos">
+    <div class="card-img" onclick="abrirGaleria(17)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-0-1777408379368.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-1-1777408389484.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-2-1777408407280.jpg"]' data-nome="Porta Copos">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POCO-0067-0-1777408379368.jpg" alt="Porta Copos">
       
       <span class="cod">cod. 6184</span>
@@ -900,7 +876,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="abridor parede mdf 6mm personalizado" data-cat="linha churrasco" data-sku="abr-005-v2">
-    <div class="card-img" onclick="abrirGaleria(19)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/ABR-005-V2-0-1777131581559.jpg"]' data-nome="Abridor Parede MDF 6mm Personalizado">
+    <div class="card-img" onclick="abrirGaleria(18)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/ABR-005-V2-0-1777131581559.jpg"]' data-nome="Abridor Parede MDF 6mm Personalizado">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/ABR-005-V2-0-1777131581559.jpg" alt="Abridor Parede MDF 6mm Personalizado">
       
       <span class="cod">cod. ABR-005-V2</span>
@@ -933,7 +909,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="faca inox 7" cabo em madeira - cervo" data-cat="facas" data-sku="107">
-    <div class="card-img" onclick="abrirGaleria(20)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-0-1776958395441.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-1-1776958402810.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-2-1776958413948.jpg"]' data-nome="Faca Inox 7&quot; Cabo em Madeira - Cervo">
+    <div class="card-img" onclick="abrirGaleria(19)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-0-1776958395441.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-1-1776958402810.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-2-1776958413948.jpg"]' data-nome="Faca Inox 7&quot; Cabo em Madeira - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/107-0-1776958395441.jpg" alt="Faca Inox 7" Cabo em Madeira - Cervo">
       
       <span class="cod">cod. 107</span>
@@ -960,7 +936,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="faca inox 8" cabo ergonômico - cervo" data-cat="facas" data-sku="1188">
-    <div class="card-img" onclick="abrirGaleria(21)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-0-1776958991417.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-1-1776958997673.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-2-1776959027171.jpg"]' data-nome="Faca Inox 8&quot; Cabo Ergonômico - Cervo">
+    <div class="card-img" onclick="abrirGaleria(20)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-0-1776958991417.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-1-1776958997673.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-2-1776959027171.jpg"]' data-nome="Faca Inox 8&quot; Cabo Ergonômico - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1188-0-1776958991417.jpg" alt="Faca Inox 8" Cabo Ergonômico - Cervo">
       
       <span class="cod">cod. 1188</span>
@@ -987,7 +963,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="faca inox 10" cabo híbrido - cervo" data-cat="facas" data-sku="131">
-    <div class="card-img" onclick="abrirGaleria(22)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-1188-0-1776973184000.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/131-1-1776973327638.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/131-2-1776973335195.jpg"]' data-nome="Faca Inox 10&quot; Cabo Híbrido - Cervo">
+    <div class="card-img" onclick="abrirGaleria(21)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-1188-0-1776973184000.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/131-1-1776973327638.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/131-2-1776973335195.jpg"]' data-nome="Faca Inox 10&quot; Cabo Híbrido - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-1188-0-1776973184000.jpg" alt="Faca Inox 10" Cabo Híbrido - Cervo">
       
       <span class="cod">cod. 131</span>
@@ -1014,7 +990,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="faca gaúcha - dal castel" data-cat="facas" data-sku="fac-517">
-    <div class="card-img" onclick="abrirGaleria(23)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-0-1777372344561.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-1-1777372364499.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-2-1777372374994.jpg"]' data-nome="Faca Gaúcha - Dal Castel">
+    <div class="card-img" onclick="abrirGaleria(22)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-0-1777372344561.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-1-1777372364499.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-2-1777372374994.jpg"]' data-nome="Faca Gaúcha - Dal Castel">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/Fac-517-0-1777372344561.jpg" alt="Faca Gaúcha - Dal Castel">
       
       <span class="cod">cod. Fac-517</span>
@@ -1047,7 +1023,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="faca adaga picasso alpaca uruguaia - cervo" data-cat="facas" data-sku="190">
-    <div class="card-img" onclick="abrirGaleria(24)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-0-1776960997737.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-1-1776961004858.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-2-1776961010194.jpg"]' data-nome="Faca Adaga Picasso Alpaca Uruguaia - Cervo">
+    <div class="card-img" onclick="abrirGaleria(23)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-0-1776960997737.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-1-1776961004858.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-2-1776961010194.jpg"]' data-nome="Faca Adaga Picasso Alpaca Uruguaia - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1731-0-1776960997737.jpg" alt="Faca Adaga Picasso Alpaca Uruguaia - Cervo">
       
       <span class="cod">cod. 190</span>
@@ -1080,7 +1056,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="faca coreadeira 4" cabo de madeira - cervo" data-cat="facas" data-sku="104">
-    <div class="card-img" onclick="abrirGaleria(25)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-0-1776955863535.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-1-1776955895770.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-2-1776955907215.jpg"]' data-nome="Faca Coreadeira 4&quot; Cabo de Madeira - Cervo">
+    <div class="card-img" onclick="abrirGaleria(24)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-0-1776955863535.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-1-1776955895770.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-2-1776955907215.jpg"]' data-nome="Faca Coreadeira 4&quot; Cabo de Madeira - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/104-0-1776955863535.jpg" alt="Faca Coreadeira 4" Cabo de Madeira - Cervo">
       
       <span class="cod">cod. 104</span>
@@ -1107,7 +1083,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto faca + garfo + estojo - promocional" data-cat="facas › conjuntos" data-sku="94138">
-    <div class="card-img" onclick="abrirGaleria(26)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-0-1777731058597.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-1-1777731064012.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-2-1777731072569.jpg"]' data-nome="Conjunto Faca + Garfo + Estojo - Promocional">
+    <div class="card-img" onclick="abrirGaleria(25)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-0-1777731058597.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-1-1777731064012.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-2-1777731072569.jpg"]' data-nome="Conjunto Faca + Garfo + Estojo - Promocional">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/94138-0-1777731058597.jpg" alt="Conjunto Faca + Garfo + Estojo - Promocional">
       
       <span class="cod">cod. 94138</span>
@@ -1134,7 +1110,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto faca, garfo chaira 8" - cervo" data-cat="facas › conjuntos" data-sku="fcj-001">
-    <div class="card-img" onclick="abrirGaleria(27)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-0-1776974226606.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-1-1776974242853.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-2-1776975111511.jpg"]' data-nome="Conjunto Faca, Garfo Chaira 8&quot; - Cervo">
+    <div class="card-img" onclick="abrirGaleria(26)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-0-1776974226606.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-1-1776974242853.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-2-1776975111511.jpg"]' data-nome="Conjunto Faca, Garfo Chaira 8&quot; - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FCJ-001-0-1776974226606.jpg" alt="Conjunto Faca, Garfo Chaira 8" - Cervo">
       
       <span class="cod">cod. FCJ-001</span>
@@ -1161,7 +1137,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto 3 em 1 - faca 8", chaira e garfinho" data-cat="facas › conjuntos" data-sku="161">
-    <div class="card-img" onclick="abrirGaleria(28)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-0-1776966169557.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-1-1776966175844.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-2-1776971450306.jpg"]' data-nome="Conjunto 3 em 1 - Faca 8&quot;, Chaira e Garfinho">
+    <div class="card-img" onclick="abrirGaleria(27)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-0-1776966169557.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-1-1776966175844.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-2-1776971450306.jpg"]' data-nome="Conjunto 3 em 1 - Faca 8&quot;, Chaira e Garfinho">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/161-0-1776966169557.jpg" alt="Conjunto 3 em 1 - Faca 8", Chaira e Garfinho">
       
       <span class="cod">cod. 161</span>
@@ -1188,7 +1164,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto de faca e garfo 04″ - cb osso - dal castel" data-cat="facas › conjuntos" data-sku="1504">
-    <div class="card-img" onclick="abrirGaleria(29)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-0-1777374604653.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-1-1777374609259.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-2-1777374613613.jpg"]' data-nome="Conjunto de Faca e Garfo 04″ - Cb Osso - Dal Castel">
+    <div class="card-img" onclick="abrirGaleria(28)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-0-1777374604653.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-1-1777374609259.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-2-1777374613613.jpg"]' data-nome="Conjunto de Faca e Garfo 04″ - Cb Osso - Dal Castel">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1504-0-1777374604653.jpg" alt="Conjunto de Faca e Garfo 04″ - Cb Osso - Dal Castel">
       
       <span class="cod">cod. 1504</span>
@@ -1210,7 +1186,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto faca e chaira 8" - cervo" data-cat="facas › conjuntos" data-sku="109">
-    <div class="card-img" onclick="abrirGaleria(30)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-0-1776965049024.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-1-1776965074361.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-2-1776965082427.jpg"]' data-nome="Conjunto Faca e Chaira 8&quot; - Cervo">
+    <div class="card-img" onclick="abrirGaleria(29)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-0-1776965049024.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-1-1776965074361.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-2-1776965082427.jpg"]' data-nome="Conjunto Faca e Chaira 8&quot; - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/109-0-1776965049024.jpg" alt="Conjunto Faca e Chaira 8" - Cervo">
       
       <span class="cod">cod. 109</span>
@@ -1237,7 +1213,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto faca e chaira 8" - dal castel" data-cat="facas › conjuntos" data-sku="523">
-    <div class="card-img" onclick="abrirGaleria(31)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-0-1777313858361.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-1-1777313889550.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-2-1777313896081.jpg"]' data-nome="Conjunto Faca e Chaira 8&quot; - Dal Castel">
+    <div class="card-img" onclick="abrirGaleria(30)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-0-1777313858361.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-1-1777313889550.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-2-1777313896081.jpg"]' data-nome="Conjunto Faca e Chaira 8&quot; - Dal Castel">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/523-0-1777313858361.jpg" alt="Conjunto Faca e Chaira 8" - Dal Castel">
       
       <span class="cod">cod. 523</span>
@@ -1263,68 +1239,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="expositor de canivetes (1mx40cm)" data-cat="facas › cutelos e outros" data-sku="exc-002">
-    <div class="card-img" onclick="abrirGaleria(32)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-0-1776703796377.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-1-1776703807644.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-2-1776703822572.jpg"]' data-nome="Expositor de Canivetes (1mx40cm)">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-0-1776703796377.jpg" alt="Expositor de Canivetes (1mx40cm)">
-      
-      <span class="cod">cod. EXC-002</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Facas › Cutelos e outros</div>
-      <div class="card-name">Expositor de Canivetes (1mx40cm)</div>
-      <ul class="card-desc"><li>Iluminação LED</li><li>Prateleiras Ajustáveis (25 canivetes)</li><li>Em compensado 10mm - Efeito queimado</li><li>Corte Computadorizado à laser - envio montado</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        <table class="price-tbl">
-        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="">
-          <td class="ptbl-size">100% Canivete</td>
-          <td class="ptbl-avulso">R$ 578,90</td>
-          <td class="ptbl-atac">R$ 492,90<span class="atac-min"> +3un</span></td>
-        </tr><tr class="ptbl-last">
-          <td class="ptbl-size">Misto: caniv. e prateleira</td>
-          <td class="ptbl-avulso">R$ 578,90</td>
-          <td class="ptbl-atac">R$ 492,90<span class="atac-min"> +3un</span></td>
-        </tr>
-      </table>
-      </div>
-      
-      <button class="btn-cart" data-id="ad767ea1-e419-4ca9-a4fa-5ae9a3586d0d" data-nome="Expositor de Canivetes (1mx40cm)" data-sku="EXC-002" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
-  <div class="card" data-nome="expositor de facas g" data-cat="facas › cutelos e outros" data-sku="420">
-    <div class="card-img" onclick="abrirGaleria(33)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-0-1777550781555.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-1-1777550786325.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-2-1777550790322.jpg"]' data-nome="Expositor de Facas G">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-0-1777550781555.jpg" alt="Expositor de Facas G">
-      
-      <span class="cod">cod. 420</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Facas › Cutelos e outros</div>
-      <div class="card-name">Expositor de Facas G</div>
-      <ul class="card-desc"><li>Iluminação LED</li><li>Prateleiras Ajustáveis (24 facas)</li><li>Em compensado 10mm - Efeito queimado</li><li>Corte Computadorizado à laser - envio montado</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        
-        
-        <div class="price-main" style="text-decoration:line-through;color:#9ca3af;font-size:var(--t-sm);font-weight:600">R$ 731,90</div>
-        <div class="price-prom-row"><span class="prom-tag">promo</span><strong class="price-prom-val">R$ 650,00</strong></div>
-        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 621,90</strong></div>
-      
-      </div>
-      
-      <button class="btn-cart" data-id="a2b1a43d-de6b-4367-81ca-a2d40ead65fa" data-nome="Expositor de Facas G" data-sku="420" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
   <div class="card" data-nome="faca fileteira 6" cabo de osso - dal castel" data-cat="facas › cutelos e outros" data-sku="506">
-    <div class="card-img" onclick="abrirGaleria(34)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-0-1777377347166.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-1-1777377353704.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-2-1777377382231.jpg"]' data-nome="Faca Fileteira 6&quot; Cabo De Osso - Dal Castel">
+    <div class="card-img" onclick="abrirGaleria(31)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-0-1777377347166.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-1-1777377353704.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-2-1777377382231.jpg"]' data-nome="Faca Fileteira 6&quot; Cabo De Osso - Dal Castel">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/506-0-1777377347166.jpg" alt="Faca Fileteira 6" Cabo De Osso - Dal Castel">
       
       <span class="cod">cod. 506</span>
@@ -1350,35 +1266,35 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="machadinha aço inox - cervo" data-cat="facas › cutelos e outros" data-sku="170">
-    <div class="card-img" onclick="abrirGaleria(35)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-0-1777031139369.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-1-1777031148892.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-2-1777031159271.jpg"]' data-nome="Machadinha Aço Inox - Cervo">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-0-1777031139369.jpg" alt="Machadinha Aço Inox - Cervo">
+  <div class="card" data-nome="faca aço carbono 9" cabo artesanal- dal castel" data-cat="facas › cutelos e outros" data-sku="509">
+    <div class="card-img" onclick="abrirGaleria(32)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-0-1777376186528.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-1-1777376193195.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-2-1777376201619.jpg"]' data-nome="Faca Aço Carbono 9&quot; Cabo Artesanal- Dal Castel">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-0-1777376186528.jpg" alt="Faca Aço Carbono 9" Cabo Artesanal- Dal Castel">
       
-      <span class="cod">cod. 170</span>
+      <span class="cod">cod. 509</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
       <div class="card-cat">Facas › Cutelos e outros</div>
-      <div class="card-name">Machadinha Aço Inox - Cervo</div>
-      <ul class="card-desc"><li>Lâmina Full Tang 4mm</li><li>Tamanho: 8 polegadas (20 cm)</li><li>Cabo em imbuia ou guajuvira</li><li>Personalização Grátis Lâmina e baínha</li><li>Caixa de Papel branco</li></ul>
+      <div class="card-name">Faca Aço Carbono 9" Cabo Artesanal- Dal Castel</div>
+      <ul class="card-desc"><li>Lâmina 09 pol de Aço Carbono 1070 4mm</li><li>Bainha em couro</li><li>Cabo Artesanal Osso e madeira</li><li>Caixa de Papel branco</li></ul>
     </div>
     <div class="card-footer">
       <div class="card-prices">
         
         
-        <div class="price-main">R$ 397,90</div>
+        <div class="price-main">R$ 305,90</div>
         
-        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 338,90</strong></div>
+        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 260,90</strong></div>
       
       </div>
       
-      <button class="btn-cart" data-id="2633b0ad-2fa5-4539-8a3e-8b298c8ae0a5" data-nome="Machadinha Aço Inox - Cervo" data-sku="170" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="e8dfbe7c-aefb-4725-b849-3631245cc56d" data-nome="Faca Aço Carbono 9&quot; Cabo Artesanal- Dal Castel" data-sku="509" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
   <div class="card" data-nome="adaga 12" - dal castel" data-cat="facas › cutelos e outros" data-sku="521">
-    <div class="card-img" onclick="abrirGaleria(36)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/521-0-1777325981341.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/521-1-1777325991066.jpg"]' data-nome="Adaga 12&quot; - Dal Castel">
+    <div class="card-img" onclick="abrirGaleria(33)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/521-0-1777325981341.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/521-1-1777325991066.jpg"]' data-nome="Adaga 12&quot; - Dal Castel">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/521-0-1777325981341.jpg" alt="Adaga 12" - Dal Castel">
       
       <span class="cod">cod. 521</span>
@@ -1399,8 +1315,35 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
+  <div class="card" data-nome="faca de caça - dal castel" data-cat="facas › cutelos e outros" data-sku="69230">
+    <div class="card-img" onclick="abrirGaleria(34)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-0-1777373128523.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-1-1777373148117.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-2-1777373195964.jpg"]' data-nome="Faca de Caça - Dal Castel">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-0-1777373128523.jpg" alt="Faca de Caça - Dal Castel">
+      
+      <span class="cod">cod. 69230</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Facas › Cutelos e outros</div>
+      <div class="card-name">Faca de Caça - Dal Castel</div>
+      <ul class="card-desc"><li>10 cm de lâmina - 4mm</li><li>Bainha em couro</li><li>Cabo de chifre</li><li>Caixa de Papel branco</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main">R$ 193,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 164,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="ef0df5ba-afeb-430b-9ab0-edef419aac96" data-nome="Faca de Caça - Dal Castel" data-sku="69230" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
   <div class="card" data-nome="cutelo 8" - dal castel" data-cat="facas › cutelos e outros" data-sku="1507">
-    <div class="card-img" onclick="abrirGaleria(37)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-0-1777323176973.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-1-1777323183824.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-2-1777323192465.jpg"]' data-nome="Cutelo 8&quot; - Dal Castel">
+    <div class="card-img" onclick="abrirGaleria(35)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-0-1777323176973.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-1-1777323183824.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-2-1777323192465.jpg"]' data-nome="Cutelo 8&quot; - Dal Castel">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1507-0-1777323176973.jpg" alt="Cutelo 8" - Dal Castel">
       
       <span class="cod">cod. 1507</span>
@@ -1427,7 +1370,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="cutelo 9" brut full tang fosfatizado - cervo" data-cat="facas › cutelos e outros" data-sku="cut-002">
-    <div class="card-img" onclick="abrirGaleria(38)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-0-1776976436052.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-1-1776976515397.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-2-1776976536122.jpg"]' data-nome="Cutelo 9&quot; Brut Full Tang Fosfatizado - Cervo">
+    <div class="card-img" onclick="abrirGaleria(36)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-0-1776976436052.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-1-1776976515397.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-2-1776976536122.jpg"]' data-nome="Cutelo 9&quot; Brut Full Tang Fosfatizado - Cervo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CUT-002-0-1776976436052.jpg" alt="Cutelo 9" Brut Full Tang Fosfatizado - Cervo">
       
       <span class="cod">cod. CUT-002</span>
@@ -1449,6 +1392,60 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </div>
       
       <button class="btn-cart" data-id="8f5bcb3a-7866-4e87-8197-435b45ae4b3d" data-nome="Cutelo 9&quot; Brut Full Tang Fosfatizado - Cervo" data-sku="CUT-002" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="machadinha aço inox - cervo" data-cat="facas › cutelos e outros" data-sku="170">
+    <div class="card-img" onclick="abrirGaleria(37)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-0-1777031139369.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-1-1777031148892.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-2-1777031159271.jpg"]' data-nome="Machadinha Aço Inox - Cervo">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/170-0-1777031139369.jpg" alt="Machadinha Aço Inox - Cervo">
+      
+      <span class="cod">cod. 170</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Facas › Cutelos e outros</div>
+      <div class="card-name">Machadinha Aço Inox - Cervo</div>
+      <ul class="card-desc"><li>Lâmina Full Tang 4mm</li><li>Tamanho: 8 polegadas (20 cm)</li><li>Cabo em imbuia ou guajuvira</li><li>Personalização Grátis Lâmina e baínha</li><li>Caixa de Papel branco</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main">R$ 397,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 338,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="2633b0ad-2fa5-4539-8a3e-8b298c8ae0a5" data-nome="Machadinha Aço Inox - Cervo" data-sku="170" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="expositor de facas g" data-cat="facas › cutelos e outros" data-sku="420">
+    <div class="card-img" onclick="abrirGaleria(38)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-0-1777550781555.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-1-1777550786325.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-2-1777550790322.jpg"]' data-nome="Expositor de Facas G">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXF-001-0-1777550781555.jpg" alt="Expositor de Facas G">
+      
+      <span class="cod">cod. 420</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Facas › Cutelos e outros</div>
+      <div class="card-name">Expositor de Facas G</div>
+      <ul class="card-desc"><li>Iluminação LED</li><li>Prateleiras Ajustáveis (24 facas)</li><li>Em compensado 10mm - Efeito queimado</li><li>Corte Computadorizado à laser - envio montado</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main" style="text-decoration:line-through;color:#9ca3af;font-size:var(--t-sm);font-weight:600">R$ 731,90</div>
+        <div class="price-prom-row"><span class="prom-tag">promo</span><strong class="price-prom-val">R$ 650,00</strong></div>
+        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 621,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="a2b1a43d-de6b-4367-81ca-a2d40ead65fa" data-nome="Expositor de Facas G" data-sku="420" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
@@ -1480,62 +1477,41 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="faca aço carbono 9" cabo artesanal- dal castel" data-cat="facas › cutelos e outros" data-sku="509">
-    <div class="card-img" onclick="abrirGaleria(40)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-0-1777376186528.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-1-1777376193195.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-2-1777376201619.jpg"]' data-nome="Faca Aço Carbono 9&quot; Cabo Artesanal- Dal Castel">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/509-0-1777376186528.jpg" alt="Faca Aço Carbono 9" Cabo Artesanal- Dal Castel">
+  <div class="card" data-nome="expositor de canivetes (1mx40cm)" data-cat="facas › cutelos e outros" data-sku="exc-002">
+    <div class="card-img" onclick="abrirGaleria(40)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-0-1776703796377.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-1-1776703807644.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-2-1776703822572.jpg"]' data-nome="Expositor de Canivetes (1mx40cm)">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EXC-002-0-1776703796377.jpg" alt="Expositor de Canivetes (1mx40cm)">
       
-      <span class="cod">cod. 509</span>
+      <span class="cod">cod. EXC-002</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
       <div class="card-cat">Facas › Cutelos e outros</div>
-      <div class="card-name">Faca Aço Carbono 9" Cabo Artesanal- Dal Castel</div>
-      <ul class="card-desc"><li>Lâmina 09 pol de Aço Carbono 1070 4mm</li><li>Bainha em couro</li><li>Cabo Artesanal Osso e madeira</li><li>Caixa de Papel branco</li></ul>
+      <div class="card-name">Expositor de Canivetes (1mx40cm)</div>
+      <ul class="card-desc"><li>Iluminação LED</li><li>Prateleiras Ajustáveis (25 canivetes)</li><li>Em compensado 10mm - Efeito queimado</li><li>Corte Computadorizado à laser - envio montado</li></ul>
     </div>
     <div class="card-footer">
       <div class="card-prices">
-        
-        
-        <div class="price-main">R$ 305,90</div>
-        
-        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 260,90</strong></div>
-      
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">100% Canivete</td>
+          <td class="ptbl-avulso">R$ 578,90</td>
+          <td class="ptbl-atac">R$ 492,90<span class="atac-min"> +3un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">Misto: caniv. e prateleira</td>
+          <td class="ptbl-avulso">R$ 578,90</td>
+          <td class="ptbl-atac">R$ 492,90<span class="atac-min"> +3un</span></td>
+        </tr>
+      </table>
       </div>
       
-      <button class="btn-cart" data-id="e8dfbe7c-aefb-4725-b849-3631245cc56d" data-nome="Faca Aço Carbono 9&quot; Cabo Artesanal- Dal Castel" data-sku="509" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
-  <div class="card" data-nome="faca de caça - dal castel" data-cat="facas › cutelos e outros" data-sku="69230">
-    <div class="card-img" onclick="abrirGaleria(41)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-0-1777373128523.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-1-1777373148117.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-2-1777373195964.jpg"]' data-nome="Faca de Caça - Dal Castel">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/FAC-003-0-1777373128523.jpg" alt="Faca de Caça - Dal Castel">
-      
-      <span class="cod">cod. 69230</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Facas › Cutelos e outros</div>
-      <div class="card-name">Faca de Caça - Dal Castel</div>
-      <ul class="card-desc"><li>10 cm de lâmina - 4mm</li><li>Bainha em couro</li><li>Cabo de chifre</li><li>Caixa de Papel branco</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        
-        
-        <div class="price-main">R$ 193,90</div>
-        
-        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 164,90</strong></div>
-      
-      </div>
-      
-      <button class="btn-cart" data-id="ef0df5ba-afeb-430b-9ab0-edef419aac96" data-nome="Faca de Caça - Dal Castel" data-sku="69230" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="ad767ea1-e419-4ca9-a4fa-5ae9a3586d0d" data-nome="Expositor de Canivetes (1mx40cm)" data-sku="EXC-002" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
   <div class="card" data-nome="troféu ouro da terra - expositor de grãos" data-cat="troféus e placas" data-sku="trou-01">
-    <div class="card-img" onclick="abrirGaleria(42)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774987446572/0.jpg"]' data-nome="Troféu Ouro da Terra - Expositor de Grãos">
+    <div class="card-img" onclick="abrirGaleria(41)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774987446572/0.jpg"]' data-nome="Troféu Ouro da Terra - Expositor de Grãos">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774987446572/0.jpg" alt="Troféu Ouro da Terra - Expositor de Grãos">
       <div class="card-tags-overlay"><span class="tag tag-premium">Premium</span></div>
       <span class="cod">cod. TRou-01</span>
@@ -1562,7 +1538,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu eclipse mdf tripla camada" data-cat="troféus e placas" data-sku="trec-001-v1">
-    <div class="card-img" onclick="abrirGaleria(43)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/1.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/2.jpg"]' data-nome="Troféu Eclipse MDF Tripla Camada">
+    <div class="card-img" onclick="abrirGaleria(42)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/1.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/2.jpg"]' data-nome="Troféu Eclipse MDF Tripla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/0.jpg" alt="Troféu Eclipse MDF Tripla Camada">
       
       <span class="cod">cod. TREC-001-V1</span>
@@ -1599,7 +1575,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu totem acrílico & mdf amadeirado - base elevada" data-cat="troféus e placas" data-sku="trt-001-v2">
-    <div class="card-img" onclick="abrirGaleria(44)" data-imgs='[]' data-nome="Troféu Totem Acrílico & MDF Amadeirado - Base Elevada">
+    <div class="card-img" onclick="abrirGaleria(43)" data-imgs='[]' data-nome="Troféu Totem Acrílico & MDF Amadeirado - Base Elevada">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. TRT-001-V2</span>
@@ -1632,7 +1608,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu totem acrílico + madeira" data-cat="troféus e placas" data-sku="tam-003">
-    <div class="card-img" onclick="abrirGaleria(45)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-0-1778245540300.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-1-1778245548233.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-2-1778245557533.jpg"]' data-nome="Troféu Totem Acrílico + Madeira">
+    <div class="card-img" onclick="abrirGaleria(44)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-0-1778245540300.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-1-1778245548233.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-2-1778245557533.jpg"]' data-nome="Troféu Totem Acrílico + Madeira">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-0-1778245540300.jpg" alt="Troféu Totem Acrílico + Madeira">
       
       <span class="cod">cod. TAM-003</span>
@@ -1659,9 +1635,9 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu brasil - acrílico/madeira dupla camada" data-cat="troféus e placas" data-sku="trb-001-v2">
-    <div class="card-img" onclick="abrirGaleria(46)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-0-1776186788661.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-1-1776186786394.jpg"]' data-nome="Troféu Brasil - Acrílico/Madeira Dupla Camada">
+    <div class="card-img" onclick="abrirGaleria(45)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-0-1776186788661.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-1-1776186786394.jpg"]' data-nome="Troféu Brasil - Acrílico/Madeira Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-0-1776186788661.jpg" alt="Troféu Brasil - Acrílico/Madeira Dupla Camada">
-      
+      <div class="card-tags-overlay"><span class="tag tag-destaque">Destaque</span></div>
       <span class="cod">cod. TRB-001-V2</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span></div>
     </div>
@@ -1692,7 +1668,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu luminoso luxo - base luminosa" data-cat="troféus e placas" data-sku="tbl-0001-v2">
-    <div class="card-img" onclick="abrirGaleria(47)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/1.png","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/2.jpg"]' data-nome="Troféu Luminoso Luxo - Base Luminosa">
+    <div class="card-img" onclick="abrirGaleria(46)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/1.png","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/2.jpg"]' data-nome="Troféu Luminoso Luxo - Base Luminosa">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg" alt="Troféu Luminoso Luxo - Base Luminosa">
       <div class="card-tags-overlay"><span class="tag tag-premium">Premium</span></div>
       <span class="cod">cod. TBL-0001-V2</span>
@@ -1725,7 +1701,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu jogador" data-cat="troféus e placas" data-sku="trj-001">
-    <div class="card-img" onclick="abrirGaleria(48)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-0-1778167532128.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-1-1778167547161.jpg"]' data-nome="Troféu Jogador">
+    <div class="card-img" onclick="abrirGaleria(47)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-0-1778167532128.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-1-1778167547161.jpg"]' data-nome="Troféu Jogador">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-0-1778167532128.jpg" alt="Troféu Jogador">
       
       <span class="cod">cod. TRJ-001</span>
@@ -1774,7 +1750,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu vanguard ouro" data-cat="troféus e placas" data-sku="ta2-002">
-    <div class="card-img" onclick="abrirGaleria(49)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-0-1778240931283.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-1-1778240950991.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-2-1778240955705.jpg"]' data-nome="Troféu Vanguard Ouro">
+    <div class="card-img" onclick="abrirGaleria(48)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-0-1778240931283.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-1-1778240950991.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-2-1778240955705.jpg"]' data-nome="Troféu Vanguard Ouro">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-0-1778240931283.jpg" alt="Troféu Vanguard Ouro">
       
       <span class="cod">cod. TA2-002</span>
@@ -1807,7 +1783,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha promo - mdf/gravação à laser" data-cat="troféus e placas" data-sku="7300">
-    <div class="card-img" onclick="abrirGaleria(50)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-0-1778270255314.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-1-1778270261294.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-2-1778265968692.jpg"]' data-nome="Medalha Promo - MDF/Gravação à Laser">
+    <div class="card-img" onclick="abrirGaleria(49)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-0-1778270255314.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-1-1778270261294.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-2-1778265968692.jpg"]' data-nome="Medalha Promo - MDF/Gravação à Laser">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7300-0-1778270255314.jpg" alt="Medalha Promo - MDF/Gravação à Laser">
       
       <span class="cod">cod. 7300</span>
@@ -1844,7 +1820,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha mdf 3mm - colorida" data-cat="troféus e placas" data-sku="7340">
-    <div class="card-img" onclick="abrirGaleria(51)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-0-1778270201185.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-1-1778270206444.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-2-1778266223064.jpg"]' data-nome="Medalha MDF 3mm - Colorida">
+    <div class="card-img" onclick="abrirGaleria(50)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-0-1778270201185.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-1-1778270206444.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-2-1778266223064.jpg"]' data-nome="Medalha MDF 3mm - Colorida">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7340-0-1778270201185.jpg" alt="Medalha MDF 3mm - Colorida">
       
       <span class="cod">cod. 7340</span>
@@ -1881,7 +1857,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha personalizada mdf 3mm - colorida" data-cat="troféus e placas" data-sku="7343">
-    <div class="card-img" onclick="abrirGaleria(52)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-0-1778268210633.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-1-1778268214737.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-2-1778268219474.jpg"]' data-nome="Medalha Personalizada MDF 3mm - Colorida">
+    <div class="card-img" onclick="abrirGaleria(51)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-0-1778268210633.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-1-1778268214737.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-2-1778268219474.jpg"]' data-nome="Medalha Personalizada MDF 3mm - Colorida">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7343-0-1778268210633.jpg" alt="Medalha Personalizada MDF 3mm - Colorida">
       
       <span class="cod">cod. 7343</span>
@@ -1918,7 +1894,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha mdf 6mm - colorida" data-cat="troféus e placas" data-sku="7380">
-    <div class="card-img" onclick="abrirGaleria(53)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-0-1778266380895.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-1-1778266392272.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-2-1778266415201.jpg"]' data-nome="Medalha MDF 6mm - Colorida">
+    <div class="card-img" onclick="abrirGaleria(52)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-0-1778266380895.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-1-1778266392272.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-2-1778266415201.jpg"]' data-nome="Medalha MDF 6mm - Colorida">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-7340-0-1778266380895.jpg" alt="Medalha MDF 6mm - Colorida">
       
       <span class="cod">cod. 7380</span>
@@ -1955,7 +1931,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="display expositor em mdf  3mm" data-cat="troféus e placas" data-sku="tre-001-v2">
-    <div class="card-img" onclick="abrirGaleria(54)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-0-1776698937934.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-1-1776698944381.jpg"]' data-nome="Display Expositor em MDF  3mm">
+    <div class="card-img" onclick="abrirGaleria(53)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-0-1776698937934.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-1-1776698944381.jpg"]' data-nome="Display Expositor em MDF  3mm">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-0-1776698937934.jpg" alt="Display Expositor em MDF  3mm">
       
       <span class="cod">cod. TRE-001-V2</span>
@@ -1988,7 +1964,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha acrílico - colorida" data-cat="troféus e placas" data-sku="7420">
-    <div class="card-img" onclick="abrirGaleria(55)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-0-1778266956440.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-1-1778266977031.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-2-1778267009497.jpg"]' data-nome="Medalha Acrílico - Colorida">
+    <div class="card-img" onclick="abrirGaleria(54)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-0-1778266956440.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-1-1778266977031.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-2-1778267009497.jpg"]' data-nome="Medalha Acrílico - Colorida">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7420-0-1778266956440.jpg" alt="Medalha Acrílico - Colorida">
       
       <span class="cod">cod. 7420</span>
@@ -2025,7 +2001,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha acrílico dupla camada" data-cat="troféus e placas" data-sku="7500">
-    <div class="card-img" onclick="abrirGaleria(56)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-0-1778267461727.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-1-1778267501343.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-2-1778267508305.jpg"]' data-nome="Medalha Acrílico Dupla Camada">
+    <div class="card-img" onclick="abrirGaleria(55)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-0-1778267461727.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-1-1778267501343.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-2-1778267508305.jpg"]' data-nome="Medalha Acrílico Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7500-0-1778267461727.jpg" alt="Medalha Acrílico Dupla Camada">
       
       <span class="cod">cod. 7500</span>
@@ -2062,7 +2038,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha mdf 6mm dupla camada" data-cat="troféus e placas" data-sku="7460">
-    <div class="card-img" onclick="abrirGaleria(57)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-0-1778266775595.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-1-1778266779876.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-2-1778266785223.jpg"]' data-nome="Medalha MDF 6mm Dupla Camada">
+    <div class="card-img" onclick="abrirGaleria(56)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-0-1778266775595.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-1-1778266779876.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-2-1778266785223.jpg"]' data-nome="Medalha MDF 6mm Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7460-0-1778266775595.jpg" alt="Medalha MDF 6mm Dupla Camada">
       
       <span class="cod">cod. 7460</span>
@@ -2099,7 +2075,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha personalizada acrílico dupla camada" data-cat="troféus e placas" data-sku="7501">
-    <div class="card-img" onclick="abrirGaleria(58)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-0-1778267762960.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-1-1778267773789.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-2-1778267778459.jpg"]' data-nome="Medalha Personalizada Acrílico Dupla Camada">
+    <div class="card-img" onclick="abrirGaleria(57)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-0-1778267762960.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-1-1778267773789.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-2-1778267778459.jpg"]' data-nome="Medalha Personalizada Acrílico Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7501-0-1778267762960.jpg" alt="Medalha Personalizada Acrílico Dupla Camada">
       
       <span class="cod">cod. 7501</span>
@@ -2115,15 +2091,15 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
         <table class="price-tbl">
         <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
         <tr class="">
-          <td class="ptbl-size">6 cm</td>
+          <td class="ptbl-size">7 cm</td>
           <td class="ptbl-avulso">R$ 15,90</td>
           <td class="ptbl-atac">R$ 10,90<span class="atac-min"> +50un</span></td>
         </tr><tr class="">
-          <td class="ptbl-size">7 cm</td>
+          <td class="ptbl-size">8 cm</td>
           <td class="ptbl-avulso">R$ 17,90</td>
           <td class="ptbl-atac">R$ 15,90<span class="atac-min"> +50un</span></td>
         </tr><tr class="ptbl-last">
-          <td class="ptbl-size">8 cm</td>
+          <td class="ptbl-size">9 cm</td>
           <td class="ptbl-avulso">R$ 22,90</td>
           <td class="ptbl-atac">R$ 19,90<span class="atac-min"> +50un</span></td>
         </tr>
@@ -2136,7 +2112,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="medalha personalizada mdf 6mm dupla camada" data-cat="troféus e placas" data-sku="7461">
-    <div class="card-img" onclick="abrirGaleria(59)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-0-1778268552882.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-1-1778268562543.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-2-1778268586627.jpg"]' data-nome="Medalha Personalizada MDF 6mm Dupla Camada">
+    <div class="card-img" onclick="abrirGaleria(58)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-0-1778268552882.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-1-1778268562543.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-2-1778268586627.jpg"]' data-nome="Medalha Personalizada MDF 6mm Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7461-0-1778268552882.jpg" alt="Medalha Personalizada MDF 6mm Dupla Camada">
       
       <span class="cod">cod. 7461</span>
@@ -2173,7 +2149,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu acrílico + madeira - 2 camadas" data-cat="troféus e placas" data-sku="tam-001">
-    <div class="card-img" onclick="abrirGaleria(60)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-0-1778244204044.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-1-1778244216344.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-2-1778244221917.jpg"]' data-nome="Troféu Acrílico + Madeira - 2 Camadas">
+    <div class="card-img" onclick="abrirGaleria(59)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-0-1778244204044.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-1-1778244216344.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-2-1778244221917.jpg"]' data-nome="Troféu Acrílico + Madeira - 2 Camadas">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-0-1778244204044.jpg" alt="Troféu Acrílico + Madeira - 2 Camadas">
       
       <span class="cod">cod. TAM-001</span>
@@ -2206,7 +2182,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu acrílico 1 camada" data-cat="troféus e placas" data-sku="tro-6560">
-    <div class="card-img" onclick="abrirGaleria(61)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-0-1778236709789.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-1-1778236722106.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-2-1778236729767.jpg"]' data-nome="Troféu Acrílico 1 Camada">
+    <div class="card-img" onclick="abrirGaleria(60)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-0-1778236709789.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-1-1778236722106.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-2-1778236729767.jpg"]' data-nome="Troféu Acrílico 1 Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-0-1778236709789.jpg" alt="Troféu Acrílico 1 Camada">
       
       <span class="cod">cod. TRO-6560</span>
@@ -2251,7 +2227,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu acrílico 2 camadas" data-cat="troféus e placas" data-sku="ta2-001-v5">
-    <div class="card-img" onclick="abrirGaleria(62)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-1-1776527352970.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-2-1776527360373.jpg"]' data-nome="Troféu Acrílico 2 Camadas">
+    <div class="card-img" onclick="abrirGaleria(61)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-1-1776527352970.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-2-1776527360373.jpg"]' data-nome="Troféu Acrílico 2 Camadas">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg" alt="Troféu Acrílico 2 Camadas">
       
       <span class="cod">cod. TA2-001-V5</span>
@@ -2268,24 +2244,24 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
         <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
         <tr class="">
           <td class="ptbl-size">PP: 6x10cm</td>
-          <td class="ptbl-avulso">R$ 60,90</td>
-          <td class="ptbl-atac">R$ 51,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-avulso">R$ 77,90</td>
+          <td class="ptbl-atac">R$ 66,90<span class="atac-min"> +10un</span></td>
         </tr><tr class="">
           <td class="ptbl-size">P: 10x15cm</td>
-          <td class="ptbl-avulso">R$ 85,90</td>
-          <td class="ptbl-atac">R$ 73,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-avulso">R$ 99,90</td>
+          <td class="ptbl-atac">R$ 84,90<span class="atac-min"> +10un</span></td>
         </tr><tr class="">
           <td class="ptbl-size">M: 15x23cm</td>
-          <td class="ptbl-avulso">R$ 94,90</td>
-          <td class="ptbl-atac">R$ 80,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-avulso">R$ 120,90</td>
+          <td class="ptbl-atac">R$ 102,90<span class="atac-min"> +10un</span></td>
         </tr><tr class="">
           <td class="ptbl-size">G: 20x30cm</td>
-          <td class="ptbl-avulso">R$ 114,90</td>
-          <td class="ptbl-atac">R$ 97,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-avulso">R$ 136,90</td>
+          <td class="ptbl-atac">R$ 116,90<span class="atac-min"> +10un</span></td>
         </tr><tr class="ptbl-last">
           <td class="ptbl-size">GG 25x40cm</td>
-          <td class="ptbl-avulso">R$ 163,90</td>
-          <td class="ptbl-atac">R$ 139,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-avulso">R$ 174,90</td>
+          <td class="ptbl-atac">R$ 148,90<span class="atac-min"> +10un</span></td>
         </tr>
       </table>
       </div>
@@ -2296,7 +2272,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu acrílico grosso" data-cat="troféus e placas" data-sku="tro-6055">
-    <div class="card-img" onclick="abrirGaleria(63)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-1-1778239678073.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-2-1778239684573.jpg"]' data-nome="Troféu Acrílico Grosso">
+    <div class="card-img" onclick="abrirGaleria(62)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-1-1778239678073.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-2-1778239684573.jpg"]' data-nome="Troféu Acrílico Grosso">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg" alt="Troféu Acrílico Grosso">
       
       <span class="cod">cod. TRO-6055</span>
@@ -2337,7 +2313,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu display essencial" data-cat="troféus e placas" data-sku="tam-6566">
-    <div class="card-img" onclick="abrirGaleria(64)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-0-1778251692794.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-1-1778251699672.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-2-1778257265833.jpg"]' data-nome="Troféu Display Essencial">
+    <div class="card-img" onclick="abrirGaleria(63)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-0-1778251692794.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-1-1778251699672.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-2-1778257265833.jpg"]' data-nome="Troféu Display Essencial">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-0-1778251692794.jpg" alt="Troféu Display Essencial">
       
       <span class="cod">cod. TAM-6566</span>
@@ -2364,7 +2340,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu eco bloco madeira" data-cat="troféus e placas" data-sku="6601">
-    <div class="card-img" onclick="abrirGaleria(65)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-0-1778251112102.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-1-1778251206473.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-2-1778251218805.jpg"]' data-nome="Troféu Eco Bloco Madeira">
+    <div class="card-img" onclick="abrirGaleria(64)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-0-1778251112102.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-1-1778251206473.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-2-1778251218805.jpg"]' data-nome="Troféu Eco Bloco Madeira">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-0-1778251112102.jpg" alt="Troféu Eco Bloco Madeira">
       
       <span class="cod">cod. 6601</span>
@@ -2391,7 +2367,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu vertice dupla - acrílico" data-cat="troféus e placas" data-sku="trm-001-v2">
-    <div class="card-img" onclick="abrirGaleria(66)" data-imgs='[]' data-nome="Troféu Vertice Dupla - Acrílico">
+    <div class="card-img" onclick="abrirGaleria(65)" data-imgs='[]' data-nome="Troféu Vertice Dupla - Acrílico">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. TRM-001-V2</span>
@@ -2424,7 +2400,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="kit cachaça luxo completo" data-cat="kits diversos" data-sku="4400">
-    <div class="card-img" onclick="abrirGaleria(67)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-0.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-1.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-2.jpg"]' data-nome="Kit Cachaça Luxo Completo">
+    <div class="card-img" onclick="abrirGaleria(66)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-0.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-1.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-2.jpg"]' data-nome="Kit Cachaça Luxo Completo">
       <img src="https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/4400-0.jpg" alt="Kit Cachaça Luxo Completo">
       
       <span class="cod">cod. 4400</span>
@@ -2451,7 +2427,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="sacola cartonada p/ presente magnética" data-cat="kits diversos" data-sku="sac242-v3">
-    <div class="card-img" onclick="abrirGaleria(68)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1776453584383-0-1776453584383.jpg"]' data-nome="Sacola Cartonada p/ Presente Magnética">
+    <div class="card-img" onclick="abrirGaleria(67)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1776453584383-0-1776453584383.jpg"]' data-nome="Sacola Cartonada p/ Presente Magnética">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1776453584383-0-1776453584383.jpg" alt="Sacola Cartonada p/ Presente Magnética">
       
       <span class="cod">cod. SAC242-V3</span>
@@ -2488,7 +2464,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="chaveiro acrílico 3x7 (2 camadas)" data-cat="brindes" data-sku="cha-002">
-    <div class="card-img" onclick="abrirGaleria(69)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-0-1776273063015.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-1-1776273131991.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-2-1776273139782.jpg"]' data-nome="Chaveiro Acrílico 3x7 (2 camadas)">
+    <div class="card-img" onclick="abrirGaleria(68)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-0-1776273063015.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-1-1776273131991.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-2-1776273139782.jpg"]' data-nome="Chaveiro Acrílico 3x7 (2 camadas)">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-001-V2-0-1776273063015.jpg" alt="Chaveiro Acrílico 3x7 (2 camadas)">
       
       <span class="cod">cod. CHA-002</span>
@@ -2521,7 +2497,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="chaveiro acrílico 2 camadas" data-cat="brindes" data-sku="cha-022">
-    <div class="card-img" onclick="abrirGaleria(70)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V2-0-1777049025484.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V2-1-1777049042094.jpg"]' data-nome="Chaveiro Acrílico 2 Camadas">
+    <div class="card-img" onclick="abrirGaleria(69)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V2-0-1777049025484.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V2-1-1777049042094.jpg"]' data-nome="Chaveiro Acrílico 2 Camadas">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V2-0-1777049025484.jpg" alt="Chaveiro Acrílico 2 Camadas">
       
       <span class="cod">cod. CHA-022</span>
@@ -2554,7 +2530,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="suporte p/ celular em acrílico" data-cat="brindes" data-sku="spce-0022">
-    <div class="card-img" onclick="abrirGaleria(71)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/SPCE-0022-0-1776187861356.jpg"]' data-nome="Suporte p/ Celular Em Acrílico">
+    <div class="card-img" onclick="abrirGaleria(70)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/SPCE-0022-0-1776187861356.jpg"]' data-nome="Suporte p/ Celular Em Acrílico">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/SPCE-0022-0-1776187861356.jpg" alt="Suporte p/ Celular Em Acrílico">
       
       <span class="cod">cod. SPCE-0022</span>
@@ -2587,7 +2563,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="bloco rascunho" data-cat="brindes" data-sku="77001">
-    <div class="card-img" onclick="abrirGaleria(72)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/77001-0-1779387185424.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/77001-1-1779387201507.jpg"]' data-nome="Bloco Rascunho">
+    <div class="card-img" onclick="abrirGaleria(71)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/77001-0-1779387185424.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/77001-1-1779387201507.jpg"]' data-nome="Bloco Rascunho">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/77001-0-1779387185424.jpg" alt="Bloco Rascunho">
       
       <span class="cod">cod. 77001</span>
@@ -2624,7 +2600,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="chaveiro acrílico 1 camada" data-cat="brindes" data-sku="cha-021">
-    <div class="card-img" onclick="abrirGaleria(73)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-0-1777048963153.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-1-1777048989058.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-2-1777049000219.jpg"]' data-nome="Chaveiro Acrílico 1 Camada">
+    <div class="card-img" onclick="abrirGaleria(72)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-0-1777048963153.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-1-1777048989058.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-2-1777049000219.jpg"]' data-nome="Chaveiro Acrílico 1 Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CHA-021-V1-0-1777048963153.jpg" alt="Chaveiro Acrílico 1 Camada">
       
       <span class="cod">cod. CHA-021</span>
@@ -2657,7 +2633,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto caneta e lapiseira metal - 08094" data-cat="brindes" data-sku="93365">
-    <div class="card-img" onclick="abrirGaleria(74)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087527419-0-1776087527419.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087538607-1-1776087538607.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087552120-2-1776087552120.jpg"]' data-nome="Conjunto Caneta e Lapiseira Metal - 08094">
+    <div class="card-img" onclick="abrirGaleria(73)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087527419-0-1776087527419.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087538607-1-1776087538607.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087552120-2-1776087552120.jpg"]' data-nome="Conjunto Caneta e Lapiseira Metal - 08094">
       <img src="https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087527419-0-1776087527419.jpg" alt="Conjunto Caneta e Lapiseira Metal - 08094">
       
       <span class="cod">cod. 93365</span>
@@ -2684,7 +2660,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="conjunto caneta e lapiseira metal - 180par" data-cat="brindes" data-sku="93366">
-    <div class="card-img" onclick="abrirGaleria(75)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/93366-0-1776088030820.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087118370-1-1776087118370.jpg"]' data-nome="Conjunto Caneta e Lapiseira Metal - 180PAR">
+    <div class="card-img" onclick="abrirGaleria(74)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/93366-0-1776088030820.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/1776087118370-1-1776087118370.jpg"]' data-nome="Conjunto Caneta e Lapiseira Metal - 180PAR">
       <img src="https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/93366-0-1776088030820.jpg" alt="Conjunto Caneta e Lapiseira Metal - 180PAR">
       
       <span class="cod">cod. 93366</span>
@@ -2711,7 +2687,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="suporte p/ celular promo - mdf 3mm" data-cat="brindes" data-sku="9703">
-    <div class="card-img" onclick="abrirGaleria(76)" data-imgs='[]' data-nome="Suporte p/ Celular Promo - MDF 3mm">
+    <div class="card-img" onclick="abrirGaleria(75)" data-imgs='[]' data-nome="Suporte p/ Celular Promo - MDF 3mm">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. 9703</span>
@@ -2738,7 +2714,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="bomba de tereré dentada" data-cat="tereré e chimarrão" data-sku="219">
-    <div class="card-img" onclick="abrirGaleria(77)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-0-1776688543731.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-1-1776688595198.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-2-1776688601465.jpg"]' data-nome="Bomba de Tereré Dentada">
+    <div class="card-img" onclick="abrirGaleria(76)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-0-1776688543731.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-1-1776688595198.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-2-1776688601465.jpg"]' data-nome="Bomba de Tereré Dentada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/219-0-1776688543731.jpg" alt="Bomba de Tereré Dentada">
       
       <span class="cod">cod. 219</span>
@@ -2771,7 +2747,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="bomba de tereré premium - inox telada" data-cat="tereré e chimarrão" data-sku="btt-001-v2">
-    <div class="card-img" onclick="abrirGaleria(78)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/BTT-001-V2-0-1776689629526.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/BTT-001-V2-1-1776689645858.jpg"]' data-nome="Bomba de Tereré Premium - Inox Telada">
+    <div class="card-img" onclick="abrirGaleria(77)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/BTT-001-V2-0-1776689629526.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/BTT-001-V2-1-1776689645858.jpg"]' data-nome="Bomba de Tereré Premium - Inox Telada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/BTT-001-V2-0-1776689629526.jpg" alt="Bomba de Tereré Premium - Inox Telada">
       
       <span class="cod">cod. BTT-001-V2</span>
@@ -2804,7 +2780,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="copo de tereré encapado ou inox 250ml" data-cat="tereré e chimarrão" data-sku="359">
-    <div class="card-img" onclick="abrirGaleria(79)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/359-0-1776703580218.jpg"]' data-nome="Copo de Tereré Encapado ou Inox 250ml">
+    <div class="card-img" onclick="abrirGaleria(78)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/359-0-1776703580218.jpg"]' data-nome="Copo de Tereré Encapado ou Inox 250ml">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/359-0-1776703580218.jpg" alt="Copo de Tereré Encapado ou Inox 250ml">
       
       <span class="cod">cod. 359</span>
@@ -2837,7 +2813,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="copo de tereré quadrado inox 250ml" data-cat="tereré e chimarrão" data-sku="353-v1">
-    <div class="card-img" onclick="abrirGaleria(80)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-0-1776703611324.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-1-1776703622043.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-2-1776703625691.jpg"]' data-nome="Copo de Tereré Quadrado Inox 250ml">
+    <div class="card-img" onclick="abrirGaleria(79)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-0-1776703611324.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-1-1776703622043.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-2-1776703625691.jpg"]' data-nome="Copo de Tereré Quadrado Inox 250ml">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/353-V1-0-1776703611324.jpg" alt="Copo de Tereré Quadrado Inox 250ml">
       
       <span class="cod">cod. 353-V1</span>
@@ -2870,7 +2846,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="kit tereré - couro simples" data-cat="tereré e chimarrão" data-sku="361">
-    <div class="card-img" onclick="abrirGaleria(81)" data-imgs='[]' data-nome="Kit Tereré - Couro Simples">
+    <div class="card-img" onclick="abrirGaleria(80)" data-imgs='[]' data-nome="Kit Tereré - Couro Simples">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. 361</span>
@@ -2897,7 +2873,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="kit tereré quadrado inox ou color" data-cat="tereré e chimarrão" data-sku="900">
-    <div class="card-img" onclick="abrirGaleria(82)" data-imgs='[]' data-nome="Kit Tereré Quadrado Inox ou Color">
+    <div class="card-img" onclick="abrirGaleria(81)" data-imgs='[]' data-nome="Kit Tereré Quadrado Inox ou Color">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. 900</span>
@@ -2930,7 +2906,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="bomba de tereré - bojo colher" data-cat="tereré e chimarrão" data-sku="358">
-    <div class="card-img" onclick="abrirGaleria(83)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/358-0-1776080498430.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/358-1-1776080509017.jpg"]' data-nome="Bomba de Tereré - Bojo Colher">
+    <div class="card-img" onclick="abrirGaleria(82)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/358-0-1776080498430.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/358-1-1776080509017.jpg"]' data-nome="Bomba de Tereré - Bojo Colher">
       <img src="https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/358-0-1776080498430.jpg" alt="Bomba de Tereré - Bojo Colher">
       
       <span class="cod">cod. 358</span>
@@ -2957,7 +2933,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="cuia uruguaia torpedo - bocal inox" data-cat="tereré e chimarrão" data-sku="4890">
-    <div class="card-img" onclick="abrirGaleria(84)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-0-1778595456239.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-1-1778595462312.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-2-1778595468404.jpg"]' data-nome="Cuia Uruguaia Torpedo - Bocal Inox">
+    <div class="card-img" onclick="abrirGaleria(83)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-0-1778595456239.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-1-1778595462312.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-2-1778595468404.jpg"]' data-nome="Cuia Uruguaia Torpedo - Bocal Inox">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/4890-0-1778595456239.jpg" alt="Cuia Uruguaia Torpedo - Bocal Inox">
       
       <span class="cod">cod. 4890</span>
@@ -2984,7 +2960,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="caixa luxo mdf amadeirado" data-cat="mdf e outros" data-sku="cxl-002-v3">
-    <div class="card-img" onclick="abrirGaleria(85)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-0-1776259190211.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-1-1776259744132.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-2-1776275143831.jpg"]' data-nome="Caixa Luxo MDF Amadeirado">
+    <div class="card-img" onclick="abrirGaleria(84)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-0-1776259190211.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-1-1776259744132.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-2-1776275143831.jpg"]' data-nome="Caixa Luxo MDF Amadeirado">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXL-002-0-1776259190211.jpg" alt="Caixa Luxo MDF Amadeirado">
       
       <span class="cod">cod. CXL-002-V3</span>
@@ -3020,41 +2996,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="caixa papel p/ tábua" data-cat="mdf e outros" data-sku="cxp-002">
-    <div class="card-img" onclick="abrirGaleria(86)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXP-002-0-1777891714784.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXP-002-1-1777891720890.jpg"]' data-nome="Caixa Papel p/ Tábua">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXP-002-0-1777891714784.jpg" alt="Caixa Papel p/ Tábua">
-      
-      <span class="cod">cod. CXP-002</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span></div>
-    </div>
-    <div class="card-body">
-      <div class="card-cat">MDF e Outros</div>
-      <div class="card-name">Caixa Papel p/ Tábua</div>
-      <ul class="card-desc"><li>Papel triplex branco 320g</li><li>*Atacado - Adesivo com logo</li><li>Espaço extra para faca ou petisqueira</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        <table class="price-tbl">
-        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="">
-          <td class="ptbl-size">Cx: 30x40</td>
-          <td class="ptbl-avulso">R$ 18,90</td>
-          <td class="ptbl-atac">R$ 16,90<span class="atac-min"> +5un</span></td>
-        </tr><tr class="ptbl-last">
-          <td class="ptbl-size">Cx: 30x50</td>
-          <td class="ptbl-avulso">R$ 27,90</td>
-          <td class="ptbl-atac">R$ 23,90<span class="atac-min"> +5un</span></td>
-        </tr>
-      </table>
-      </div>
-      
-      <button class="btn-cart" data-id="980649cd-5c2b-4939-aefd-37e3fb6acf26" data-nome="Caixa Papel p/ Tábua" data-sku="CXP-002" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
   <div class="card" data-nome="caixa básica mdf 3mm branco - tampa de encaixe" data-cat="mdf e outros" data-sku="cxb-001-v1">
-    <div class="card-img" onclick="abrirGaleria(87)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXB-001-V1-0-1776882673442.jpg"]' data-nome="Caixa Básica MDF 3mm branco - Tampa de Encaixe">
+    <div class="card-img" onclick="abrirGaleria(85)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXB-001-V1-0-1776882673442.jpg"]' data-nome="Caixa Básica MDF 3mm branco - Tampa de Encaixe">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CXB-001-V1-0-1776882673442.jpg" alt="Caixa Básica MDF 3mm branco - Tampa de Encaixe">
       
       <span class="cod">cod. CXB-001-V1</span>
@@ -3083,7 +3026,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="caixa mdf p/ tábua" data-cat="mdf e outros" data-sku="cxt-002">
-    <div class="card-img" onclick="abrirGaleria(88)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PROD-V1-0-1777293852340.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PROD-V1-1-1777293861128.jpg"]' data-nome="Caixa MDF p/ Tábua">
+    <div class="card-img" onclick="abrirGaleria(86)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PROD-V1-0-1777293852340.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PROD-V1-1-1777293861128.jpg"]' data-nome="Caixa MDF p/ Tábua">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PROD-V1-0-1777293852340.jpg" alt="Caixa MDF p/ Tábua">
       
       <span class="cod">cod. CXT-002</span>
@@ -3116,7 +3059,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="plinko adesivado 1mx75cmx7cm" data-cat="decoração" data-sku="plk-001">
-    <div class="card-img" onclick="abrirGaleria(89)" data-imgs='[]' data-nome="Plinko Adesivado 1mx75cmx7cm">
+    <div class="card-img" onclick="abrirGaleria(87)" data-imgs='[]' data-nome="Plinko Adesivado 1mx75cmx7cm">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. PLK-001</span>
@@ -3143,7 +3086,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="porta chaves m" data-cat="decoração" data-sku="pcm-001">
-    <div class="card-img" onclick="abrirGaleria(90)" data-imgs='[]' data-nome="Porta Chaves M">
+    <div class="card-img" onclick="abrirGaleria(88)" data-imgs='[]' data-nome="Porta Chaves M">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. PCM-001</span>
@@ -3176,7 +3119,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="imã de geladeria 2 camada mdf - cidade" data-cat="decoração" data-sku="ima-001">
-    <div class="card-img" onclick="abrirGaleria(91)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-0-1776864534710.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-1-1776871912686.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-2-1776871930842.jpg"]' data-nome="Imã de Geladeria 2 camada MDF - Cidade">
+    <div class="card-img" onclick="abrirGaleria(89)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-0-1776864534710.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-1-1776871912686.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-2-1776871930842.jpg"]' data-nome="Imã de Geladeria 2 camada MDF - Cidade">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-0-1776864534710.jpg" alt="Imã de Geladeria 2 camada MDF - Cidade">
       
       <span class="cod">cod. IMA-001</span>
@@ -3202,41 +3145,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="porta treco - galheteiro" data-cat="decoração" data-sku="gal-002">
-    <div class="card-img" onclick="abrirGaleria(92)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-0-1778166148094.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-1-1778166426948.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-2-1778166441258.jpg"]' data-nome="Porta Treco - Galheteiro">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-0-1778166148094.jpg" alt="Porta Treco - Galheteiro">
-      
-      <span class="cod">cod. GAL-002</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Decoração</div>
-      <div class="card-name">Porta Treco - Galheteiro</div>
-      <ul class="card-desc"><li>Em MDF 3mm branco ou Compensado</li><li>Impressão colorida ou gravação à laser</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        <table class="price-tbl">
-        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="">
-          <td class="ptbl-size">Metade</td>
-          <td class="ptbl-avulso">R$ 33,90</td>
-          <td class="ptbl-atac">R$ 28,90<span class="atac-min"> +15un</span></td>
-        </tr><tr class="ptbl-last">
-          <td class="ptbl-size">Duplo</td>
-          <td class="ptbl-avulso">R$ 51,90</td>
-          <td class="ptbl-atac">R$ 44,90<span class="atac-min"> +15un</span></td>
-        </tr>
-      </table>
-      </div>
-      <div class="qtd-min-note">* quantidade mínima 3 un</div>
-      <button class="btn-cart" data-id="3ef757b9-1364-451d-80f1-9f3e282442c9" data-nome="Porta Treco - Galheteiro" data-sku="GAL-002" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
   <div class="card" data-nome="porta chaves xg (75 ganchos)" data-cat="decoração" data-sku="pcxg-075">
-    <div class="card-img" onclick="abrirGaleria(93)" data-imgs='[]' data-nome="Porta Chaves XG (75 ganchos)">
+    <div class="card-img" onclick="abrirGaleria(90)" data-imgs='[]' data-nome="Porta Chaves XG (75 ganchos)">
       <div class="img-ph">📦</div>
       
       <span class="cod">cod. PCXG-075</span>
@@ -3263,7 +3173,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="cubo raizes afeto" data-cat="decoração" data-sku="dec-001">
-    <div class="card-img" onclick="abrirGaleria(94)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-001-0-1777894606444.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-001-1-1777894615804.jpg"]' data-nome="Cubo Raizes Afeto">
+    <div class="card-img" onclick="abrirGaleria(91)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-001-0-1777894606444.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-001-1-1777894615804.jpg"]' data-nome="Cubo Raizes Afeto">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-001-0-1777894606444.jpg" alt="Cubo Raizes Afeto">
       
       <span class="cod">cod. DEC-001</span>
@@ -3290,7 +3200,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="imã de geladeria 2 camadas (cidade)" data-cat="decoração" data-sku="ima-002">
-    <div class="card-img" onclick="abrirGaleria(95)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-002-0-1776946934675.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-002-1-1776946944447.jpg"]' data-nome="Imã de Geladeria 2 camadas (cidade)">
+    <div class="card-img" onclick="abrirGaleria(92)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-002-0-1776946934675.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-002-1-1776946944447.jpg"]' data-nome="Imã de Geladeria 2 camadas (cidade)">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-002-0-1776946934675.jpg" alt="Imã de Geladeria 2 camadas (cidade)">
       
       <span class="cod">cod. IMA-002</span>
@@ -3317,7 +3227,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="imã de geladeria pequeno mdf 3mm branco" data-cat="decoração" data-sku="ima-001">
-    <div class="card-img" onclick="abrirGaleria(96)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-0-1776864534710.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-1-1776871912686.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-2-1776871930842.jpg"]' data-nome="Imã de Geladeria Pequeno MDF 3mm branco">
+    <div class="card-img" onclick="abrirGaleria(93)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-0-1776864534710.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-1-1776871912686.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-2-1776871930842.jpg"]' data-nome="Imã de Geladeria Pequeno MDF 3mm branco">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/IMA-001-0-1776864534710.jpg" alt="Imã de Geladeria Pequeno MDF 3mm branco">
       
       <span class="cod">cod. IMA-001</span>
@@ -3344,7 +3254,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="jardim raizes - trio afeto" data-cat="decoração" data-sku="dec-002">
-    <div class="card-img" onclick="abrirGaleria(97)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-0-1777895933457.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-1-1777895941439.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-2-1777895947753.jpg"]' data-nome="Jardim Raizes - Trio Afeto">
+    <div class="card-img" onclick="abrirGaleria(94)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-0-1777895933457.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-1-1777895941439.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-2-1777895947753.jpg"]' data-nome="Jardim Raizes - Trio Afeto">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/DEC-002-0-1777895933457.jpg" alt="Jardim Raizes - Trio Afeto">
       
       <span class="cod">cod. DEC-002</span>
@@ -3371,7 +3281,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="porta retrato mdf 3mm branco" data-cat="decoração" data-sku="pre-001-v1">
-    <div class="card-img" onclick="abrirGaleria(98)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-0-1777407303743.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-1-1777407312423.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-2-1777407324289.jpg"]' data-nome="Porta Retrato MDF 3mm Branco">
+    <div class="card-img" onclick="abrirGaleria(95)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-0-1777407303743.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-1-1777407312423.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-2-1777407324289.jpg"]' data-nome="Porta Retrato MDF 3mm Branco">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PRE-001-V1-0-1777407303743.jpg" alt="Porta Retrato MDF 3mm Branco">
       
       <span class="cod">cod. PRE-001-V1</span>
@@ -3408,7 +3318,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="porta treco - galheteiro mdf 6mm amadeirado" data-cat="decoração" data-sku="gal-003">
-    <div class="card-img" onclick="abrirGaleria(99)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-GAL-002-0-1779388526984.jpg"]' data-nome="Porta Treco - Galheteiro MDF 6mm amadeirado">
+    <div class="card-img" onclick="abrirGaleria(96)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-GAL-002-0-1779388526984.jpg"]' data-nome="Porta Treco - Galheteiro MDF 6mm amadeirado">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-GAL-002-0-1779388526984.jpg" alt="Porta Treco - Galheteiro MDF 6mm amadeirado">
       
       <span class="cod">cod. GAL-003</span>
@@ -3435,7 +3345,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="bomba de tereré colher premium" data-cat="" data-sku="btp-006">
-    <div class="card-img" onclick="abrirGaleria(100)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-0-1776080813849.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-1-1776080832055.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-2-1776080847491.jpg"]' data-nome="Bomba de Tereré Colher Premium">
+    <div class="card-img" onclick="abrirGaleria(97)" data-imgs='["https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-0-1776080813849.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-1-1776080832055.jpg","https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-2-1776080847491.jpg"]' data-nome="Bomba de Tereré Colher Premium">
       <img src="https://raw.githubusercontent.com/inovacaoentalhe/Catalogo-Inova-o/main/images/produtos/BTP-006-0-1776080813849.jpg" alt="Bomba de Tereré Colher Premium">
       
       <span class="cod">cod. BTP-006</span>
@@ -3468,7 +3378,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu pesca promo 6mm" data-cat="troféus e placas › troféu pescaria" data-sku="trp-005">
-    <div class="card-img" onclick="abrirGaleria(101)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-0-1779385020549.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-1-1779385032551.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-2-1779385044982.jpg"]' data-nome="Troféu Pesca Promo 6mm">
+    <div class="card-img" onclick="abrirGaleria(98)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-0-1779385020549.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-1-1779385032551.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-2-1779385044982.jpg"]' data-nome="Troféu Pesca Promo 6mm">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-0-1779385020549.jpg" alt="Troféu Pesca Promo 6mm">
       
       <span class="cod">cod. TRP-005</span>
@@ -3495,7 +3405,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu pesca baixo" data-cat="troféus e placas › troféu pescaria" data-sku="trp-001">
-    <div class="card-img" onclick="abrirGaleria(102)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-0-1777412222420.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-1-1777412500393.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-2-1777412531907.jpg"]' data-nome="Troféu Pesca Baixo">
+    <div class="card-img" onclick="abrirGaleria(99)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-0-1777412222420.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-1-1777412500393.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-2-1777412531907.jpg"]' data-nome="Troféu Pesca Baixo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-0-1777412222420.jpg" alt="Troféu Pesca Baixo">
       
       <span class="cod">cod. TRP-001</span>
@@ -3522,7 +3432,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
   </div>
   <div class="card" data-nome="troféu pesca madeira dupla camada" data-cat="troféus e placas › troféu pescaria" data-sku="trp-002">
-    <div class="card-img" onclick="abrirGaleria(103)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-0-1779363969041.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-1-1779363975660.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-2-1779364028051.jpg"]' data-nome="Troféu Pesca Madeira Dupla Camada">
+    <div class="card-img" onclick="abrirGaleria(100)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-0-1779363969041.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-1-1779363975660.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-2-1779364028051.jpg"]' data-nome="Troféu Pesca Madeira Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-0-1779363969041.jpg" alt="Troféu Pesca Madeira Dupla Camada">
       
       <span class="cod">cod. TRP-002</span>
@@ -3550,6 +3460,301 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </div>
       
       <button class="btn-cart" data-id="610b6a20-67c0-4109-8948-a2609d3be877" data-nome="Troféu Pesca Madeira Dupla Camada" data-sku="TRP-002" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="canivete  artesanal com baínha" data-cat="canivetes" data-sku="5202">
+    <div class="card-img" onclick="abrirGaleria(101)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780332848082-0-1780332848082.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780332793191-1-1780332793191.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780332884461-2-1780332884461.jpg"]' data-nome="Canivete  Artesanal com Baínha">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780332848082-0-1780332848082.jpg" alt="Canivete  Artesanal com Baínha">
+      
+      <span class="cod">cod. 5202</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Canivetes</div>
+      <div class="card-name">Canivete  Artesanal com Baínha</div>
+      <ul class="card-desc"><li>Lâmina aço inox</li><li>Cabo em madeira nobre</li><li>Bainha em couro</li><li>Personalização grátis Lamina e Bainha</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main">R$ 79,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 69,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="93143cc0-f2e5-423a-bd23-7269e0e5970e" data-nome="Canivete  Artesanal com Baínha" data-sku="5202" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="cardápio prancheta mdf 6mm" data-cat="mdf e outros" data-sku="cap-001">
+    <div class="card-img" onclick="abrirGaleria(102)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CAP-001-0-1779718696080.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CAP-001-1-1779718702526.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CAP-001-2-1779718965181.jpg"]' data-nome="Cardápio Prancheta MDF 6mm">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/CAP-001-0-1779718696080.jpg" alt="Cardápio Prancheta MDF 6mm">
+      
+      <span class="cod">cod. CAP-001</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">MDF e Outros</div>
+      <div class="card-name">Cardápio Prancheta MDF 6mm</div>
+      <ul class="card-desc"><li>Em MDF 6mm amadeirado</li><li>Logo gravada à laser</li><li>Adaptavel ao formato do seu cardápio</li><li>Escolha onde vão os furos (cima ou lateral)</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">p/ A4 (21x29)</td>
+          <td class="ptbl-avulso">R$ 56,90</td>
+          <td class="ptbl-atac">R$ 48,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">p/ A5 (14x21)</td>
+          <td class="ptbl-avulso">R$ 45,90</td>
+          <td class="ptbl-atac">R$ 39,90<span class="atac-min"> +10un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="4cd87449-271d-4592-ad35-2c06bd693283" data-nome="Cardápio Prancheta MDF 6mm" data-sku="CAP-001" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="chapéu fibra de bambu" data-cat="brindes" data-sku="675">
+    <div class="card-img" onclick="abrirGaleria(103)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780054060413-0-1780054060413.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780054122574-1-1780054122574.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780054140382-2-1780054140382.jpg"]' data-nome="Chapéu Fibra de Bambu">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/1780054060413-0-1780054060413.jpg" alt="Chapéu Fibra de Bambu">
+      
+      <span class="cod">cod. 675</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Brindes</div>
+      <div class="card-name">Chapéu Fibra de Bambu</div>
+      <ul class="card-desc"><li>Extremamente leve e confortável</li><li>Resistente à deformação</li><li>Personalização colorida na fita</li><li>Tamanhos: 54, 56, 58, 60, 62</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main">R$ 68,00</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 56,00</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="5270b476-1caf-4880-8d7f-7155d6711057" data-nome="Chapéu Fibra de Bambu" data-sku="675" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="placa em acrílico" data-cat="decoração" data-sku="pla-001">
+    <div class="card-img" onclick="abrirGaleria(104)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PLA-001-0-1779735001475.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PLA-001-1-1779735007454.jpg"]' data-nome="Placa em Acrílico">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/PLA-001-0-1779735001475.jpg" alt="Placa em Acrílico">
+      
+      <span class="cod">cod. PLA-001</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Decoração</div>
+      <div class="card-name">Placa em Acrílico</div>
+      <ul class="card-desc"><li>Em Acrílico 3mm (diversas cores)</li><li>Impressão UV colorida direta</li><li>Fita dupla face (verde)</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">10x15cm</td>
+          <td class="ptbl-avulso">R$ 52,90</td>
+          <td class="ptbl-atac">R$ 44,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">15x20cm</td>
+          <td class="ptbl-avulso">R$ 94,90</td>
+          <td class="ptbl-atac">R$ 80,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">20x30cm</td>
+          <td class="ptbl-avulso">R$ 142,90</td>
+          <td class="ptbl-atac">R$ 121,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">30x40cm</td>
+          <td class="ptbl-avulso">R$ 219,90</td>
+          <td class="ptbl-atac">R$ 186,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">40x60cm</td>
+          <td class="ptbl-avulso">R$ 257,90</td>
+          <td class="ptbl-atac">R$ 219,90<span class="atac-min"> +10un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="1a597abf-a078-46af-8234-77b18b252f9e" data-nome="Placa em Acrílico" data-sku="PLA-001" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="porta treco - galheteiro" data-cat="decoração" data-sku="gal-002">
+    <div class="card-img" onclick="abrirGaleria(105)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-0-1778166148094.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-1-1778166426948.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-2-1778166441258.jpg"]' data-nome="Porta Treco - Galheteiro">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/GAL-002-0-1778166148094.jpg" alt="Porta Treco - Galheteiro">
+      
+      <span class="cod">cod. GAL-002</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Decoração</div>
+      <div class="card-name">Porta Treco - Galheteiro</div>
+      <ul class="card-desc"><li>Em MDF 3mm branco ou Compensado</li><li>Impressão colorida ou gravação à laser</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">Metade</td>
+          <td class="ptbl-avulso">R$ 33,90</td>
+          <td class="ptbl-atac">R$ 28,90<span class="atac-min"> +15un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">Duplo</td>
+          <td class="ptbl-avulso">R$ 51,90</td>
+          <td class="ptbl-atac">R$ 44,90<span class="atac-min"> +15un</span></td>
+        </tr>
+      </table>
+      </div>
+      <div class="qtd-min-note">* quantidade mínima 3 un</div>
+      <button class="btn-cart" data-id="3ef757b9-1364-451d-80f1-9f3e282442c9" data-nome="Porta Treco - Galheteiro" data-sku="GAL-002" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="tábua camisa brasil" data-cat="linha churrasco" data-sku="tbc-001">
+    <div class="card-img" onclick="abrirGaleria(106)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBC-001-1-1780055740846.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBC-001-1-1780055765702.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBC-001-2-1780055782754.jpg"]' data-nome="Tábua Camisa Brasil">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBC-001-1-1780055740846.jpg" alt="Tábua Camisa Brasil">
+      <div class="card-tags-overlay"><span class="tag tag-destaque">Destaque</span></div>
+      <span class="cod">cod. TBC-001</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Linha Churrasco</div>
+      <div class="card-name">Tábua Camisa Brasil</div>
+      <ul class="card-desc"><li>Em Madeira teca de 1,6 ou 2 mm</li><li>Impressão direta ou gravação à laser</li><li>Acabamento atóxico</li><li>Personalize com a escalação do seu time</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">Servir 25x17cm</td>
+          <td class="ptbl-avulso">R$ 49,90</td>
+          <td class="ptbl-atac">R$ 42,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">Churrasco 40x27cm</td>
+          <td class="ptbl-avulso">R$ 122,90</td>
+          <td class="ptbl-atac">R$ 104,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">Caixa Papel G</td>
+          <td class="ptbl-avulso">R$ 24,90</td>
+          <td class="ptbl-atac">R$ 21,90<span class="atac-min"> +10un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="c1c820a2-2c60-457e-8710-227871846842" data-nome="Tábua Camisa Brasil" data-sku="TBC-001" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="tábua de servir + alça" data-cat="linha churrasco" data-sku="tsa-155">
+    <div class="card-img" onclick="abrirGaleria(107)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TSA-155-0-1779883995419.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TSA-155-1-1779884030622.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TSA-155-2-1779885767315.jpg"]' data-nome="Tábua de Servir + Alça">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TSA-155-0-1779883995419.jpg" alt="Tábua de Servir + Alça">
+      
+      <span class="cod">cod. TSA-155</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Linha Churrasco</div>
+      <div class="card-name">Tábua de Servir + Alça</div>
+      <ul class="card-desc"><li>Personalização à laser ou impressão colorida</li><li>Em pinus ou teca (±1,6cm)</li><li>Medida refere-se à área útil</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">20x30cm</td>
+          <td class="ptbl-avulso">R$ 79,90</td>
+          <td class="ptbl-atac">R$ 67,90<span class="atac-min"> +15un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">Longa 20x50</td>
+          <td class="ptbl-avulso">R$ 112,90</td>
+          <td class="ptbl-atac">R$ 95,90<span class="atac-min"> +15un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="db0cadb3-df34-4470-bd62-9b6776aeceba" data-nome="Tábua de Servir + Alça" data-sku="TSA-155" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="tábua de servir 20x30 padrão" data-cat="linha churrasco" data-sku="tbs-4869">
+    <div class="card-img" onclick="abrirGaleria(108)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBS-4869-1-1779801828670.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBS-4869-1-1779882540886.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBS-4869-2-1779882562326.jpg"]' data-nome="Tábua de Servir 20x30 Padrão">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TBS-4869-1-1779801828670.jpg" alt="Tábua de Servir 20x30 Padrão">
+      
+      <span class="cod">cod. TBS-4869</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Linha Churrasco</div>
+      <div class="card-name">Tábua de Servir 20x30 Padrão</div>
+      <ul class="card-desc"><li>Chapa de teca 1,6cm</li><li>Personalização à laser</li><li>Modelo Padronizado</li><li>Opcional detalhe queimado</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">Padrão</td>
+          <td class="ptbl-avulso">R$ 59,90</td>
+          <td class="ptbl-atac">R$ 53,90<span class="atac-min"> +15un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">com Porta-Molho</td>
+          <td class="ptbl-avulso">R$ 76,90</td>
+          <td class="ptbl-atac">R$ 65,90<span class="atac-min"> +15un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="17777934-45a3-441c-ae14-f2be8802f65d" data-nome="Tábua de Servir 20x30 Padrão" data-sku="TBS-4869" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu acrílico - expositor de grãos" data-cat="troféus e placas" data-sku="tra-005">
+    <div class="card-img" onclick="abrirGaleria(109)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRou-01-0-1781022644863.jpg"]' data-nome="Troféu Acrílico - Expositor de Grãos">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRou-01-0-1781022644863.jpg" alt="Troféu Acrílico - Expositor de Grãos">
+      
+      <span class="cod">cod. TRA-005</span>
+      
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas</div>
+      <div class="card-name">Troféu Acrílico - Expositor de Grãos</div>
+      <ul class="card-desc"><li>Sanduíche Acrilico 3mm e 10mm</li><li>Logomarca Recortada/Vasada</li><li>Medidas Aproximada 27x20cm</li><li>Plaquinha Acrílica imp. colorida</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main">R$ 231,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +5un</span><strong class="price-atac-val">R$ 197,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="2eca286d-366f-494c-90d4-858d2de58823" data-nome="Troféu Acrílico - Expositor de Grãos" data-sku="TRA-005" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
@@ -3676,6 +3881,7 @@ function setGrid(val){
   var saved=localStorage.getItem("ph_grid_cols");
   if(saved){var s=document.getElementById("gridSlider");if(s){s.value=saved;setGrid(saved);}}
   document.getElementById("gridSlider").addEventListener("change",function(){localStorage.setItem("ph_grid_cols",this.value);});
+  render();
 })();
 var lbImgs=[],lbIdx=0;
 function abrirGaleria(pidx){
