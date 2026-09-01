@@ -22,7 +22,7 @@ nav a:hover{color:var(--bk);}
 .nav-wpp{background:var(--wpp);color:#fff !important;padding:10px 20px;font-weight:700 !important;border-radius:12px;display:inline-flex;align-items:center;gap:6px;transition:all .3s ease;border:none;cursor:pointer;}
 .nav-wpp:hover{transform:scale(1.02);box-shadow:0 4px 10px rgba(37,211,102,0.2);}
 /* HERO */
-.hero{background:var(--wh);padding:60px 5%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}
+.hero{background:var(--wh);padding:28px 5%;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;}
 .hero-title{font-size:var(--t-hero);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:var(--bk);}
 .hero-title em{font-style:normal;color:var(--y);}
 .hero-count{font-size:var(--t-sm);font-weight:600;color:var(--muted);}
@@ -34,8 +34,53 @@ nav a:hover{color:var(--bk);}
 .hero-prod-preco{font-size:2rem;font-weight:800;color:var(--bk);letter-spacing:-.03em;}
 .btn-wpp-hero{display:inline-flex;align-items:center;gap:8px;background:var(--wpp);color:#fff;padding:14px 28px;border-radius:14px;font-weight:700;font-size:var(--t-sm);text-decoration:none;width:fit-content;}
 .btn-wpp-hero:hover{background:var(--wpp-hover);}
+/* CAT-NAV SIDEBAR (desktop >= 900px) + CAT-LANDING (mobile < 900px) */
+.page-layout{display:flex;align-items:flex-start;max-width:1300px;margin:0 auto;padding:0 5%;}
+.cat-nav{width:190px;flex-shrink:0;position:sticky;top:130px;padding-right:12px;display:none;}
+@media(min-width:900px){.cat-nav{display:block;}}
+.cat-nav-label{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 8px 4px;border-bottom:1px solid var(--border);margin-bottom:4px;}
+.cat-item{display:flex;width:100%;padding:7px 4px 7px 8px;border:none;background:none;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:500;color:var(--muted);cursor:pointer;text-align:left;transition:color .12s;border-left:2px solid transparent;align-items:center;justify-content:space-between;gap:4px;line-height:1.3;}
+.cat-item:hover{color:var(--text);}
+.cat-item.active{color:var(--text);font-weight:700;border-left-color:var(--y);}
+.cat-item-all{font-weight:700;color:var(--text);font-size:12px;border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:6px;}
+.cat-item-all.active{border-left-color:var(--y);}
+.cat-count{font-size:10px;color:var(--muted);font-weight:500;flex-shrink:0;}
+.cat-sub{padding-left:18px;font-size:11px;}
+.cat-label{display:flex;align-items:center;gap:6px;min-width:0;flex:1;}
+.cat-icon{flex-shrink:0;width:16px;height:16px;opacity:.45;transition:opacity .12s;color:inherit;}
+.cat-item:hover .cat-icon{opacity:.75;}
+.cat-item.active .cat-icon{opacity:1;}
+.page-content{flex:1;min-width:0;}
+/* CAT-LANDING mobile */
+.cat-landing{padding:12px 5% 20px;display:block;}
+@media(min-width:900px){.cat-landing{display:none;}}
+.cat-landing-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.cat-tile{background:var(--wh);border-radius:14px;border:1.5px solid var(--border);padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0;position:relative;overflow:hidden;min-height:108px;}
+.cat-tile::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:transparent;transition:background .15s;}
+.cat-tile.active::before{background:var(--y);}
+.cat-tile-photo{width:100%;height:72px;background-size:cover;background-position:center;background-color:#f0f0f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.cat-tile-photo-icon{width:32px;height:32px;opacity:.3;}
+.cat-tile-name{font-size:10px;font-weight:700;color:var(--text);line-height:1.3;padding:7px 8px 4px;}
+.cat-tile-count{font-size:9px;font-weight:600;color:var(--muted);background:var(--bg);border-radius:20px;padding:2px 8px;margin-bottom:10px;}
+.cat-tile-all{grid-column:1/-1;flex-direction:row;text-align:left;min-height:56px;padding:12px 16px;background:var(--bk);border-color:var(--bk);gap:12px;align-items:center;}
+.cat-tile-all .cat-tile-name{color:var(--wh);font-size:12px;padding:0;}
+.cat-tile-all .cat-tile-count{background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);margin-bottom:0;}
+.cat-tile-all-icon{width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+/* Back bar + sub-chips mobile */
+.cat-back-bar{display:none;align-items:center;gap:8px;padding:10px 5% 4px;background:var(--bg);}
+.cat-back-bar.visible{display:flex;}
+.cat-back-btn{display:flex;align-items:center;gap:4px;padding:7px 12px;border-radius:8px;border:1.5px solid var(--border);background:var(--wh);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--text);cursor:pointer;white-space:nowrap;min-height:34px;}
+.cat-back-title{font-size:12px;font-weight:800;letter-spacing:-.01em;min-width:0;}
+.cat-back-title span{color:var(--y);}
+.cat-sub-chips{display:flex;gap:6px;flex-wrap:wrap;padding:6px 5% 4px;}
+.cat-sub-chip{padding:5px 12px;border-radius:20px;border:1.5px solid var(--border);background:var(--wh);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;color:var(--text);cursor:pointer;min-height:30px;transition:all .15s;}
+.cat-sub-chip.active{background:var(--bk);border-color:var(--bk);color:var(--wh);}
+/* Main grid wrapper */
+.main{padding:24px 0;flex:1;}
+@media(min-width:900px){.main{padding:24px 0;}}
+/* ICON_CAT map inline SVGs */
 /* TOOLBAR */
-.toolbar{background:var(--wh);border-bottom:1px solid var(--border);padding:15px 5%;display:flex;align-items:center;gap:12px;overflow-x:auto;position:sticky;top:64px;z-index:100;}
+.toolbar{background:var(--wh);border-bottom:1px solid var(--border);padding:12px 5%;display:flex;align-items:center;gap:8px;flex-wrap:wrap;overflow-x:visible;position:sticky;top:64px;z-index:100;}
 .search-wrap{position:relative;min-width:200px;max-width:260px;flex:1;}
 .s-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:var(--t-base);pointer-events:none;}
 .search-input{width:100%;padding:12px 15px 12px 40px;border:none;border-radius:12px;font-family:'Montserrat',sans-serif;font-size:var(--t-sm);color:var(--text);outline:none;background:#f2f2f2;transition:all .2s ease;}
@@ -46,12 +91,20 @@ nav a:hover{color:var(--bk);}
 .f-btn.active{background:var(--bk);border-color:var(--bk);color:var(--wh);}
 .f-btn-all{background:var(--bk);border:1px solid var(--bk);border-radius:20px;color:var(--wh);font-family:'Montserrat',sans-serif;font-size:var(--t-xs);font-weight:600;padding:8px 20px;cursor:pointer;white-space:nowrap;transition:all .2s ease;}
 .f-btn-all:hover{opacity:.85;}
-.btn-print{margin-left:auto;background:#fff;border:1px solid var(--border);border-radius:20px;color:var(--text);font-family:'Montserrat',sans-serif;font-size:var(--t-xs);font-weight:600;padding:8px 20px;cursor:pointer;white-space:nowrap;transition:all .2s ease;display:flex;align-items:center;gap:6px;}
+.grid-ctrl{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.grid-ctrl-label{font-size:var(--t-xs);font-weight:600;color:var(--muted);white-space:nowrap;}
+.grid-slider{-webkit-appearance:none;appearance:none;width:80px;height:4px;border-radius:4px;background:#e5e5e5;outline:none;cursor:pointer;}
+.grid-slider::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:var(--bk);cursor:pointer;}
+.grid-slider::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--bk);cursor:pointer;border:none;}
+.btn-print{background:#fff;border:1px solid var(--border);border-radius:20px;color:var(--text);font-family:'Montserrat',sans-serif;font-size:var(--t-xs);font-weight:600;padding:8px 20px;cursor:pointer;white-space:nowrap;transition:all .2s ease;display:flex;align-items:center;gap:6px;}
 .btn-print:hover{background:#f5f5f7;border-color:var(--muted);}
 /* MAIN & GRID */
-.main{padding:40px 5%;max-width:1300px;margin:0 auto;}
+.main{padding:24px 0;flex:1;}
 .section-header{display:none;}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.ver-mais-wrap{grid-column:1/-1;text-align:center;padding:24px 0 8px;}
+.btn-ver-mais{background:var(--bk);color:var(--wh);font-family:'Montserrat',sans-serif;font-size:var(--t-sm);font-weight:600;padding:12px 36px;border-radius:14px;border:none;cursor:pointer;transition:all .2s;}
+.btn-ver-mais:hover{opacity:.85;transform:scale(1.02);}
 /* CARD */
 .card{background:var(--wh);border-radius:18px;border:none;box-shadow:0 4px 12px rgba(0,0,0,0.04);display:flex;flex-direction:column;transition:transform .3s cubic-bezier(.4,0,.2,1),box-shadow .3s ease;overflow:hidden;position:relative;}
 .card:hover{transform:translateY(-6px);box-shadow:0 12px 24px rgba(0,0,0,0.08);z-index:2;}
@@ -100,7 +153,7 @@ nav a:hover{color:var(--bk);}
 .price-tbl th.th-atac{text-align:right;padding:3px 6px;background:rgba(252,184,46,.1);color:#a16207;}
 .price-tbl td{padding:4px 0;border-bottom:1px solid #f3f4f6;}
 .price-tbl tr.ptbl-last td{border-bottom:none;}
-.ptbl-size{font-size:.65rem;font-weight:700;color:var(--bk);white-space:nowrap;}
+.ptbl-size{font-size:.65rem;font-weight:700;color:var(--bk);white-space:normal;word-break:break-word;max-width:90px;}
 .ptbl-avulso{font-size:.78rem;font-weight:600;color:var(--bk);text-align:right;padding-right:6px;white-space:nowrap;}
 .ptbl-atac{font-size:.72rem;font-weight:800;color:#FCB82E;text-align:right;padding:4px 6px;background:rgba(252,184,46,.06);white-space:nowrap;}
 .atac-min{font-size:.6rem;font-weight:700;color:#b45309;display:inline;margin-left:3px;opacity:.85;}
@@ -160,7 +213,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   .toolbar{padding:12px 20px;top:64px;gap:8px;flex-wrap:wrap;overflow-x:visible;}
   .search-wrap{flex:0 0 100%;max-width:100%;min-width:0;}
   .grid{grid-template-columns:repeat(2,1fr);gap:12px;}
-  .main{padding:20px;}
+  .main{padding:12px 0;}
   .card-body{padding:12px;}
   .card-footer{padding:0 12px 12px;}
   .price-main{font-size:1.2rem;}
@@ -170,6 +223,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   .ptbl-size{font-size:.6rem;}
   footer{padding:40px 20px;}
   nav a:not(.nav-wpp){display:none;}
+  .grid-ctrl{display:none;}
   .strip{padding:40px 20px;}
   .pedido-bar{width:95%;padding:12px 16px;bottom:16px;}
   .hero-produto{flex-direction:column;gap:1.5rem;}
@@ -177,31 +231,36 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   .hero-prod-img img{height:220px;}
 }
 @media print{
-  header,.toolbar,.nav-wpp,.strip,.pedido-bar,footer,button{display:none !important;}
-  body{padding-bottom:0;margin:0;}
+  *{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}
+  header,.toolbar,.nav-wpp,.strip,.pedido-bar,footer,button,.cat-nav,.cat-landing,.cat-back-bar,.cat-sub-chips{display:none !important;}
+  body{padding-bottom:0;margin:0;background:#fff;}
   .hero{padding:16px 5%;break-inside:avoid;page-break-inside:avoid;}
   .hero-produto{break-inside:avoid;page-break-inside:avoid;}
   .main{padding:12px 5%;}
   .grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:8px;
+    gap:12px;
   }
   .card{
     box-shadow:none;
-    border:1px solid #e2e8f0;
+    border:1.5px solid #64748b;
+    border-radius:10px;
+    background:#fff;
     break-inside:avoid;
     page-break-inside:avoid;
-    overflow:visible;
+    overflow:hidden;
   }
   .card:hover{transform:none;box-shadow:none;}
-  .card-img{aspect-ratio:1/1 !important;height:auto !important;overflow:hidden;break-inside:avoid;page-break-inside:avoid;display:block;}
+  .card-img{aspect-ratio:1/1 !important;height:auto !important;overflow:hidden;break-inside:avoid;page-break-inside:avoid;display:block;border-bottom:1px solid #cbd5e1;}
   .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
   .card-body{padding:8px 10px 4px;break-inside:avoid;page-break-inside:avoid;}
   .card-name{font-size:.7rem;}
   .card-footer{padding:0 10px 8px;gap:4px;break-inside:avoid;page-break-inside:avoid;overflow:visible;}
   .price-tbl{width:100%;break-inside:avoid;page-break-inside:avoid;}
-  .price-tbl th,.price-tbl td{padding:3px 0;}
+  .price-tbl th{border-bottom:1px solid #94a3b8 !important;padding:3px 0;}
+  .price-tbl td{border-bottom:1px solid #cbd5e1 !important;padding:3px 0;}
+  .price-tbl tr.ptbl-last td{border-bottom:none !important;}
   .price-tbl tr{break-inside:avoid;page-break-inside:avoid;}
   .ptbl-size,.ptbl-avulso,.ptbl-atac{font-size:.72rem;}
   .price-main{font-size:.9rem;}
@@ -222,6 +281,10 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   <nav>
     <a href="https://inovacaoentalhe.com" target="_blank">Site</a>
     <a href="https://instagram.com/inovacaoentalhe" target="_blank">Instagram</a>
+    <div class="grid-ctrl">
+      <span class="grid-ctrl-label" id="gridColLabel">⊞ 4</span>
+      <input type="range" class="grid-slider" id="gridSlider" min="2" max="6" value="4" oninput="setGrid(this.value)">
+    </div>
     <button class="nav-wpp" id="navWppBtn" onclick="enviarPedido()">🛒 Meu Pedido <span id="navCartCount" style="display:none;background:#fff;color:#25D366;border-radius:50%;width:18px;height:18px;font-size:.6rem;font-weight:900;display:inline-flex;align-items:center;justify-content:center;margin-left:4px;">0</span></button>
   </nav>
 </header>
@@ -229,60 +292,161 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
 <div class="hero">
   <div>
     <div class="hero-title">Inovação Entalhe<br><em>Produtos com identidade.</em></div>
-    <div class="hero-count">16 produtos disponíveis</div>
+    <div class="hero-count">23 produtos disponíveis</div>
   </div>
 </div>
 
-<div class="toolbar">
+
+<!-- SEARCH BAR (shared) -->
+<div class="toolbar" style="padding:10px 5%;top:64px;">
   <div class="search-wrap">
     <span class="s-icon">🔍</span>
-    <input type="text" id="searchInput" class="search-input" placeholder="Buscar produtos..." oninput="render()">
+    <input type="text" id="searchInput" class="search-input" placeholder="Buscar produtos..." oninput="onBuscaInput()">
   </div>
-  <div class="filter-label">Filtrar:</div>
-  <button class="f-btn-all" onclick="filtrar('')">Todos</button>
-  <button class="f-btn" onclick="filtrar('Troféus e Placas')">Troféus e Placas</button>
-    <button class="f-btn" onclick="filtrar('Troféus e Placas › Troféu Pescaria')">Troféus e Placas › Troféu Pescaria</button>
   <button class="btn-print" onclick="window.print()" title="Imprimir catálogo">🖨️ Imprimir</button>
 </div>
 
-<div class="main">
-  <div class="section-header"></div>
-  <div class="grid" id="grid">
-  <div class="card" data-nome="display expositor em mdf  3mm" data-cat="troféus e placas" data-sku="tre-001-v2">
-    <div class="card-img" onclick="abrirGaleria(0)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-0-1776698937934.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-1-1776698944381.jpg"]' data-nome="Display Expositor em MDF  3mm">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-0-1776698937934.jpg" alt="Display Expositor em MDF  3mm">
+<!-- MOBILE: barra de voltar + sub-chips (oculta por padrão) -->
+<div class="cat-back-bar" id="catBackBar">
+  <button class="cat-back-btn" onclick="voltarCategorias()">&#8592; Categorias</button>
+  <span class="cat-back-title" id="catBackTitle"></span>
+</div>
+<div class="cat-sub-chips" id="catSubChips" style="display:none"></div>
+
+<!-- MOBILE: landing de categorias (grid de tiles) -->
+<section class="cat-landing" id="catLanding">
+  <div class="cat-landing-grid">
+    <div class="cat-tile cat-tile-all" onclick="abrirCategoria('__todos__')">
+      <div class="cat-tile-all-icon">
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/>
+          <rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/>
+        </svg>
+      </div>
+      <span class="cat-tile-name">Todos os produtos</span>
+      <span class="cat-tile-count">23 produtos</span>
+    </div>
+    <div class="cat-tile" onclick="abrirCategoria(&quot;Troféus e Placas&quot;)"><div class="cat-tile-photo" style="background-image:url("https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-studio-1786463186330-0.jpg")"></div><span class="cat-tile-name">Troféus e Placas</span><span class="cat-tile-count">22 produtos</span></div><div class="cat-tile" onclick="abrirCategoria(&quot;MDF e Outros&quot;)"><div class="cat-tile-photo" style="background-image:url("https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POM-003-0-1781899735498.jpg")"></div><span class="cat-tile-name">MDF e Outros</span><span class="cat-tile-count">1 produto</span></div>
+  </div>
+</section>
+
+<!-- LAYOUT: sidebar (desktop) + conteúdo -->
+<div class="page-layout">
+  <!-- SIDEBAR SLIM desktop -->
+  <aside class="cat-nav" id="catNav">
+    <div class="cat-nav-label">Categorias</div>
+    <button class="cat-item cat-item-all active" id="navItemAll" onclick="filtrar('')">
+      <span class="cat-label">
+        <svg class="cat-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/>
+          <rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/>
+        </svg>
+        <span>Todos</span>
+      </span>
+      <span class="cat-count">23</span>
+    </button>
+    <button class="cat-item" data-navpai="troféus e placas" onclick="filtrarPai(&quot;Troféus e Placas&quot;)"><span class="cat-label"><svg class="cat-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2 h6 v5 a3 3 0 0 1-6 0 Z"/><path d="M5 4 H3 a1 1 0 0 0 0 4 h2"/><path d="M11 4 h2 a1 1 0 0 1 0 4 h-2"/><line x1="8" y1="10" x2="8" y2="13"/><line x1="5" y1="13" x2="11" y2="13"/></svg><span>Troféus e Placas</span></span><span class="cat-count">22</span></button><button class="cat-item cat-sub" data-navsub="troféu pescaria" data-navpaisub="troféus e placas" onclick="filtrar(&quot;Troféus e Placas › Troféu Pescaria&quot;)"><span class="cat-label"><svg class="cat-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 8 L8 12 L12 6"/></svg><span>Troféu Pescaria</span></span><span class="cat-count">5</span></button><button class="cat-item" data-navpai="mdf e outros" onclick="filtrarPai(&quot;MDF e Outros&quot;)"><span class="cat-label"><svg class="cat-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="12" height="8" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="2" y1="10" x2="14" y2="10"/></svg><span>MDF e Outros</span></span><span class="cat-count">1</span></button>
+  </aside>
+
+  <div class="page-content">
+    <!-- breadcrumb/título desktop -->
+    <div id="catBreadcrumb" style="padding:16px 0 12px;display:none;">
+      <span id="catBreadTitle" style="font-size:17px;font-weight:800;letter-spacing:-.02em;"></span>
+      <span id="catBreadSub" style="font-size:11px;color:var(--muted);margin-left:8px;"></span>
+    </div>
+
+    <div class="main">
+      <div class="section-header"></div>
+      <div class="grid" id="grid">
+  <div class="card" data-nome="display expositor multiuso mdf com visor transparente" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tre-001">
+    <div class="card-img" onclick="abrirGaleria(0)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-studio-1786463186330-0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-1-1776698944381.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-V2-0-1776698937934.jpg"]' data-nome="Display Expositor Multiuso MDF com Visor Transparente">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-studio-1786463186330-0.jpg" alt="Display Expositor Multiuso MDF com Visor Transparente">
       
-      <span class="cod">cod. TRE-001-V2</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span></div>
+      <span class="cod">cod. TRE-001</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
       <div class="card-cat">Troféus e Placas</div>
-      <div class="card-name">Display Expositor em MDF  3mm</div>
-      <ul class="card-desc"><li>Janela recortada para Milho, soja...</li><li>Estrutura em mdf 3mm branco</li><li>Gravação da logo à laser</li></ul>
+      <div class="card-name">Display Expositor Multiuso MDF com Visor Transparente</div>
+      <ul class="card-desc"><li>Janela com recorte personalizado (logo, grão, espiga e mais)</li><li>MDF 3mm branco com gravação a laser</li><li>Visor em Petg transparente</li><li>Personalização total: recorte, placa e visor interno</li></ul>
     </div>
     <div class="card-footer">
       <div class="card-prices">
         <table class="price-tbl">
         <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
         <tr class="">
-          <td class="ptbl-size">P: 10x17cm</td>
-          <td class="ptbl-avulso">R$ 49,90</td>
-          <td class="ptbl-atac">R$ 45,50<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-size">Reto: 13x10x6cm</td>
+          <td class="ptbl-avulso">R$ 47,90</td>
+          <td class="ptbl-atac">R$ 40,90<span class="atac-min"> +10un</span></td>
         </tr><tr class="ptbl-last">
-          <td class="ptbl-size">M: 19x10cm</td>
+          <td class="ptbl-size">Base Inclinada: 20x10cm</td>
           <td class="ptbl-avulso">R$ 65,90</td>
           <td class="ptbl-atac">R$ 56,90<span class="atac-min"> +10un</span></td>
         </tr>
       </table>
       </div>
-      
-      <button class="btn-cart" data-id="ac7737d8-bcd4-4eb4-88c1-2c3d4d3a5a49" data-nome="Display Expositor em MDF  3mm" data-sku="TRE-001-V2" onclick="toggleCart(this)">
+      <div class="qtd-min-note">* quantidade mínima 3 un</div>
+      <button class="btn-cart" data-id="ac7737d8-bcd4-4eb4-88c1-2c3d4d3a5a49" data-nome="Display Expositor Multiuso MDF com Visor Transparente" data-sku="TRE-001" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu acrílico + madeira - 2 camadas" data-cat="troféus e placas" data-sku="tam-001">
-    <div class="card-img" onclick="abrirGaleria(1)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-0-1778244204044.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-1-1778244216344.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-2-1778244221917.jpg"]' data-nome="Troféu Acrílico + Madeira - 2 Camadas">
+  <div class="card" data-nome="porta medalha 35x35" data-cat="mdf e outros" data-catpai="mdf e outros" data-sku="pom-003">
+    <div class="card-img" onclick="abrirGaleria(1)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POM-003-0-1781899735498.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POM-003-1-1781899717437.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POM-003-2-1781899725179.jpg"]' data-nome="Porta Medalha 35x35">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POM-003-0-1781899735498.jpg" alt="Porta Medalha 35x35">
+      
+      <span class="cod">cod. POM-003</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">MDF e Outros</div>
+      <div class="card-name">Porta Medalha 35x35</div>
+      <ul class="card-desc"><li>Estrutura Robusta em MDF 6mm</li><li>Personalização Exclusiva Grátis</li><li>35cmx35cm - para 50 medalhas</li><li>Fixação por parafusos (não inclusos)</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main price-main-varejo" style="text-decoration:line-through;color:#9ca3af;font-size:var(--t-sm);font-weight:600">R$ 59,90</div>
+        <div class="price-prom-row"><span class="prom-tag">oferta</span><strong class="price-prom-val">R$ 50,91</strong></div>
+        <div class="price-atac-row"><span class="atac-tag">atac. +5un</span><strong class="price-atac-val">R$ 50,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="4fd6e52d-dd66-489c-8909-f53278c31c1a" data-nome="Porta Medalha 35x35" data-sku="POM-003" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu acrílico - expositor de grãos" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tra-005">
+    <div class="card-img" onclick="abrirGaleria(2)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRou-01-0-1781022644863.jpg"]' data-nome="Troféu Acrílico - Expositor de Grãos">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRou-01-0-1781022644863.jpg" alt="Troféu Acrílico - Expositor de Grãos">
+      
+      <span class="cod">cod. TRA-005</span>
+      
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas</div>
+      <div class="card-name">Troféu Acrílico - Expositor de Grãos</div>
+      <ul class="card-desc"><li>Sanduíche Acrilico 3mm e 10mm</li><li>Logomarca Recortada/Vasada</li><li>Medidas Aproximada 27x20cm</li><li>Plaquinha Acrílica imp. colorida</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main price-main-varejo">R$ 231,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +5un</span><strong class="price-atac-val">R$ 197,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="2eca286d-366f-494c-90d4-858d2de58823" data-nome="Troféu Acrílico - Expositor de Grãos" data-sku="TRA-005" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu acrílico + madeira - 2 camadas" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tam-001">
+    <div class="card-img" onclick="abrirGaleria(3)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-0-1778244204044.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-1-1778244216344.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-2-1778244221917.jpg"]' data-nome="Troféu Acrílico + Madeira - 2 Camadas">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TRB-001-V2-0-1778244204044.jpg" alt="Troféu Acrílico + Madeira - 2 Camadas">
       
       <span class="cod">cod. TAM-001</span>
@@ -314,8 +478,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu acrílico 1 camada" data-cat="troféus e placas" data-sku="tro-6560">
-    <div class="card-img" onclick="abrirGaleria(2)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-0-1778236709789.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-1-1778236722106.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-2-1778236729767.jpg"]' data-nome="Troféu Acrílico 1 Camada">
+  <div class="card" data-nome="troféu acrílico 1 camada" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tro-6560">
+    <div class="card-img" onclick="abrirGaleria(4)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-0-1778236709789.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-1-1778236722106.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-2-1778236729767.jpg"]' data-nome="Troféu Acrílico 1 Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6560-0-1778236709789.jpg" alt="Troféu Acrílico 1 Camada">
       
       <span class="cod">cod. TRO-6560</span>
@@ -359,61 +523,16 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu acrílico 2 camadas" data-cat="troféus e placas" data-sku="ta2-001-v5">
-    <div class="card-img" onclick="abrirGaleria(3)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-1-1776527352970.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-2-1776527360373.jpg"]' data-nome="Troféu Acrílico 2 Camadas">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg" alt="Troféu Acrílico 2 Camadas">
-      
-      <span class="cod">cod. TA2-001-V5</span>
-      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Troféus e Placas</div>
-      <div class="card-name">Troféu Acrílico 2 Camadas</div>
-      <ul class="card-desc"><li>Em acrílico 3mm + segunda camada em acrílico</li><li>Base em dupla camada em acrílico</li><li>Impressão colorida direta</li><li>Corte personalizado</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        <table class="price-tbl">
-        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="">
-          <td class="ptbl-size">PP: 6x10cm</td>
-          <td class="ptbl-avulso">R$ 60,90</td>
-          <td class="ptbl-atac">R$ 51,90<span class="atac-min"> +10un</span></td>
-        </tr><tr class="">
-          <td class="ptbl-size">P: 10x15cm</td>
-          <td class="ptbl-avulso">R$ 85,90</td>
-          <td class="ptbl-atac">R$ 73,90<span class="atac-min"> +10un</span></td>
-        </tr><tr class="">
-          <td class="ptbl-size">M: 15x23cm</td>
-          <td class="ptbl-avulso">R$ 94,90</td>
-          <td class="ptbl-atac">R$ 80,90<span class="atac-min"> +10un</span></td>
-        </tr><tr class="">
-          <td class="ptbl-size">G: 20x30cm</td>
-          <td class="ptbl-avulso">R$ 114,90</td>
-          <td class="ptbl-atac">R$ 97,90<span class="atac-min"> +10un</span></td>
-        </tr><tr class="ptbl-last">
-          <td class="ptbl-size">GG 25x40cm</td>
-          <td class="ptbl-avulso">R$ 163,90</td>
-          <td class="ptbl-atac">R$ 139,90<span class="atac-min"> +10un</span></td>
-        </tr>
-      </table>
-      </div>
-      
-      <button class="btn-cart" data-id="54a10566-8b5c-4ed5-ae0b-ab7ddb3e10e0" data-nome="Troféu Acrílico 2 Camadas" data-sku="TA2-001-V5" onclick="toggleCart(this)">
-        Quero esse
-      </button>
-    </div>
-  </div>
-  <div class="card" data-nome="troféu acrílico grosso" data-cat="troféus e placas" data-sku="tro-6055">
-    <div class="card-img" onclick="abrirGaleria(4)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-1-1778239678073.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-2-1778239684573.jpg"]' data-nome="Troféu Acrílico Grosso">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg" alt="Troféu Acrílico Grosso">
+  <div class="card" data-nome="troféu acrílico 10mm" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tro-6055">
+    <div class="card-img" onclick="abrirGaleria(5)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-1-1778239678073.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-2-1778239684573.jpg"]' data-nome="Troféu Acrílico 10mm">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRO-6055-0-1778239277396.jpg" alt="Troféu Acrílico 10mm">
       
       <span class="cod">cod. TRO-6055</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
       <div class="card-cat">Troféus e Placas</div>
-      <div class="card-name">Troféu Acrílico Grosso</div>
+      <div class="card-name">Troféu Acrílico 10mm</div>
       <ul class="card-desc"><li>Em acrílico grosso de 10mm</li><li>Base em em acrílico/mdf</li><li>Impressão colorida ireta</li><li>Corte personalizado</li></ul>
     </div>
     <div class="card-footer">
@@ -440,13 +559,103 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </table>
       </div>
       
-      <button class="btn-cart" data-id="86aa19a1-edb1-4786-9726-f1cd5c8ac177" data-nome="Troféu Acrílico Grosso" data-sku="TRO-6055" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="86aa19a1-edb1-4786-9726-f1cd5c8ac177" data-nome="Troféu Acrílico 10mm" data-sku="TRO-6055" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu brasil - acrílico/madeira dupla camada" data-cat="troféus e placas" data-sku="trb-001-v2">
-    <div class="card-img" onclick="abrirGaleria(5)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-0-1776186788661.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-1-1776186786394.jpg"]' data-nome="Troféu Brasil - Acrílico/Madeira Dupla Camada">
+  <div class="card" data-nome="troféu acrílico 2 camadas" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="ta2-001-v5">
+    <div class="card-img" onclick="abrirGaleria(6)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-1-1776527352970.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-V5-2-1776527360373.jpg"]' data-nome="Troféu Acrílico 2 Camadas">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-001-0-1776522457717.jpg" alt="Troféu Acrílico 2 Camadas">
+      
+      <span class="cod">cod. TA2-001-V5</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas</div>
+      <div class="card-name">Troféu Acrílico 2 Camadas</div>
+      <ul class="card-desc"><li>Em acrílico 3mm + segunda camada em acrílico</li><li>Base em dupla camada em acrílico</li><li>Impressão colorida direta</li><li>Corte personalizado</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">PP: 6x10cm</td>
+          <td class="ptbl-avulso">R$ 77,90</td>
+          <td class="ptbl-atac">R$ 66,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">P: 10x15cm</td>
+          <td class="ptbl-avulso">R$ 99,90</td>
+          <td class="ptbl-atac">R$ 84,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">M: 15x23cm</td>
+          <td class="ptbl-avulso">R$ 120,90</td>
+          <td class="ptbl-atac">R$ 102,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">G: 20x30cm</td>
+          <td class="ptbl-avulso">R$ 136,90</td>
+          <td class="ptbl-atac">R$ 116,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">GG 25x40cm</td>
+          <td class="ptbl-avulso">R$ 174,90</td>
+          <td class="ptbl-atac">R$ 148,90<span class="atac-min"> +10un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="54a10566-8b5c-4ed5-ae0b-ab7ddb3e10e0" data-nome="Troféu Acrílico 2 Camadas" data-sku="TA2-001-V5" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu acrílico 2 camadas - base elevada" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="ta2-003">
+    <div class="card-img" onclick="abrirGaleria(7)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-003-0-1784227848824.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-003-1-1784227868277.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-003-2-1784227893656.jpg"]' data-nome="Troféu Acrílico 2 Camadas - Base Elevada">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-003-0-1784227848824.jpg" alt="Troféu Acrílico 2 Camadas - Base Elevada">
+      
+      <span class="cod">cod. TA2-003</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas</div>
+      <div class="card-name">Troféu Acrílico 2 Camadas - Base Elevada</div>
+      <ul class="card-desc"><li>Em acrílico 3mm + segunda + plaquinha</li><li>Base em tripla camada em MDF</li><li>Impressão colorida direta</li><li>Corte personalizado</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">PP: 6x10cm</td>
+          <td class="ptbl-avulso">R$ 77,90</td>
+          <td class="ptbl-atac">R$ 66,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">P: 10x15cm</td>
+          <td class="ptbl-avulso">R$ 100,90</td>
+          <td class="ptbl-atac">R$ 85,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">M: 15x23cm</td>
+          <td class="ptbl-avulso">R$ 126,90</td>
+          <td class="ptbl-atac">R$ 107,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="">
+          <td class="ptbl-size">G: 20x30cm</td>
+          <td class="ptbl-avulso">R$ 142,90</td>
+          <td class="ptbl-atac">R$ 121,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">GG 25x40cm</td>
+          <td class="ptbl-avulso">R$ 179,90</td>
+          <td class="ptbl-atac">R$ 152,90<span class="atac-min"> +10un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="bc8007c6-cec9-4eaa-8062-df6587d39d83" data-nome="Troféu Acrílico 2 Camadas - Base Elevada" data-sku="TA2-003" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu brasil - acrílico/madeira dupla camada" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="trb-001-v2">
+    <div class="card-img" onclick="abrirGaleria(8)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-0-1776186788661.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-1-1776186786394.jpg"]' data-nome="Troféu Brasil - Acrílico/Madeira Dupla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRB-001-V2-0-1776186788661.jpg" alt="Troféu Brasil - Acrílico/Madeira Dupla Camada">
       
       <span class="cod">cod. TRB-001-V2</span>
@@ -478,8 +687,41 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu display essencial" data-cat="troféus e placas" data-sku="tam-6566">
-    <div class="card-img" onclick="abrirGaleria(6)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-0-1778251692794.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-1-1778251699672.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-2-1778257265833.jpg"]' data-nome="Troféu Display Essencial">
+  <div class="card" data-nome="troféu compensado + madeira - 2 camadas" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tcm-001">
+    <div class="card-img" onclick="abrirGaleria(9)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TAM-001-0-1784142893797.jpg"]' data-nome="Troféu Compensado + Madeira - 2 Camadas">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/COPY-TAM-001-0-1784142893797.jpg" alt="Troféu Compensado + Madeira - 2 Camadas">
+      
+      <span class="cod">cod. TCM-001</span>
+      
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas</div>
+      <div class="card-name">Troféu Compensado + Madeira - 2 Camadas</div>
+      <ul class="card-desc"><li>Em compensado 6mm corte laser</li><li>Base em madeira Pinus </li><li>Aplique em 2ª camada em compensado</li><li>Impressão direta colorida </li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        <table class="price-tbl">
+        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
+        <tr class="">
+          <td class="ptbl-size">M: 23x15cm</td>
+          <td class="ptbl-avulso">R$ 111,90</td>
+          <td class="ptbl-atac">R$ 95,90<span class="atac-min"> +10un</span></td>
+        </tr><tr class="ptbl-last">
+          <td class="ptbl-size">G: 30x25cm</td>
+          <td class="ptbl-avulso">R$ 158,90</td>
+          <td class="ptbl-atac">R$ 135,90<span class="atac-min"> +10un</span></td>
+        </tr>
+      </table>
+      </div>
+      
+      <button class="btn-cart" data-id="fb717682-6460-49e1-83ab-1e492c7f31a6" data-nome="Troféu Compensado + Madeira - 2 Camadas" data-sku="TCM-001" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu display essencial" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tam-6566">
+    <div class="card-img" onclick="abrirGaleria(10)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-0-1778251692794.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-1-1778251699672.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-2-1778257265833.jpg"]' data-nome="Troféu Display Essencial">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-6566-0-1778251692794.jpg" alt="Troféu Display Essencial">
       
       <span class="cod">cod. TAM-6566</span>
@@ -494,7 +736,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       <div class="card-prices">
         
         
-        <div class="price-main">R$ 60,90</div>
+        <div class="price-main price-main-varejo">R$ 60,90</div>
         
         <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 51,90</strong></div>
       
@@ -505,8 +747,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu eclipse mdf tripla camada" data-cat="troféus e placas" data-sku="trec-001-v1">
-    <div class="card-img" onclick="abrirGaleria(7)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/1.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/2.jpg"]' data-nome="Troféu Eclipse MDF Tripla Camada">
+  <div class="card" data-nome="troféu eclipse mdf tripla camada" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="trec-001-v1">
+    <div class="card-img" onclick="abrirGaleria(11)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/1.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/2.jpg"]' data-nome="Troféu Eclipse MDF Tripla Camada">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774964627253/0.jpg" alt="Troféu Eclipse MDF Tripla Camada">
       
       <span class="cod">cod. TREC-001-V1</span>
@@ -542,8 +784,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu eco bloco madeira" data-cat="troféus e placas" data-sku="6601">
-    <div class="card-img" onclick="abrirGaleria(8)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-0-1778251112102.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-1-1778251206473.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-2-1778251218805.jpg"]' data-nome="Troféu Eco Bloco Madeira">
+  <div class="card" data-nome="troféu eco bloco madeira" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="6601">
+    <div class="card-img" onclick="abrirGaleria(12)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-0-1778251112102.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-1-1778251206473.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-2-1778251218805.jpg"]' data-nome="Troféu Eco Bloco Madeira">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/6601-0-1778251112102.jpg" alt="Troféu Eco Bloco Madeira">
       
       <span class="cod">cod. 6601</span>
@@ -558,7 +800,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       <div class="card-prices">
         
         
-        <div class="price-main">R$ 188,90</div>
+        <div class="price-main price-main-varejo">R$ 188,90</div>
         
         <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 160,90</strong></div>
       
@@ -569,8 +811,8 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu jogador" data-cat="troféus e placas" data-sku="trj-001">
-    <div class="card-img" onclick="abrirGaleria(9)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-0-1778167532128.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-1-1778167547161.jpg"]' data-nome="Troféu Jogador">
+  <div class="card" data-nome="troféu jogador" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="trj-001">
+    <div class="card-img" onclick="abrirGaleria(13)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-0-1778167532128.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-1-1778167547161.jpg"]' data-nome="Troféu Jogador">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRJ-001-0-1778167532128.jpg" alt="Troféu Jogador">
       
       <span class="cod">cod. TRJ-001</span>
@@ -618,41 +860,37 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu luminoso luxo - base luminosa" data-cat="troféus e placas" data-sku="tbl-0001-v2">
-    <div class="card-img" onclick="abrirGaleria(10)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/1.png","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/2.jpg"]' data-nome="Troféu Luminoso Luxo - Base Luminosa">
-      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg" alt="Troféu Luminoso Luxo - Base Luminosa">
+  <div class="card" data-nome="troféu luminoso luxo" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tbl-0001-v2">
+    <div class="card-img" onclick="abrirGaleria(14)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/1.png","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/2.jpg"]' data-nome="Troféu Luminoso Luxo">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/593fa755-da04-49ba-b949-d0b2a2c145cd/0.jpg" alt="Troféu Luminoso Luxo">
       
       <span class="cod">cod. TBL-0001-V2</span>
       <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
       <div class="card-cat">Troféus e Placas</div>
-      <div class="card-name">Troféu Luminoso Luxo - Base Luminosa</div>
-      <ul class="card-desc"><li>Em acrílico 5mm + Ac. Espespelhado</li><li>Base Acrílica Iluminada - à bateria</li><li>Elegante e requinte impecável</li></ul>
+      <div class="card-name">Troféu Luminoso Luxo</div>
+      <ul class="card-desc"><li>Em acrílico 3mm + Ac. Espespelhado</li><li>Base Acrílica Iluminada - à bateria</li><li>Elegante e requinte impecável</li></ul>
     </div>
     <div class="card-footer">
       <div class="card-prices">
         <table class="price-tbl">
         <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="">
+        <tr class="ptbl-last">
           <td class="ptbl-size">M: 24x15cm</td>
           <td class="ptbl-avulso">R$ 217,90</td>
           <td class="ptbl-atac">R$ 185,90<span class="atac-min"> +5un</span></td>
-        </tr><tr class="ptbl-last">
-          <td class="ptbl-size">G: 32x20cm</td>
-          <td class="ptbl-avulso">R$ 277,90</td>
-          <td class="ptbl-atac">R$ 236,90<span class="atac-min"> +5un</span></td>
         </tr>
       </table>
       </div>
       
-      <button class="btn-cart" data-id="593fa755-da04-49ba-b949-d0b2a2c145cd" data-nome="Troféu Luminoso Luxo - Base Luminosa" data-sku="TBL-0001-V2" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="593fa755-da04-49ba-b949-d0b2a2c145cd" data-nome="Troféu Luminoso Luxo" data-sku="TBL-0001-V2" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu ouro da terra - expositor de grãos" data-cat="troféus e placas" data-sku="trou-01">
-    <div class="card-img" onclick="abrirGaleria(11)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774987446572/0.jpg"]' data-nome="Troféu Ouro da Terra - Expositor de Grãos">
+  <div class="card" data-nome="troféu ouro da terra - expositor de grãos" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="trou-01">
+    <div class="card-img" onclick="abrirGaleria(15)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774987446572/0.jpg"]' data-nome="Troféu Ouro da Terra - Expositor de Grãos">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/imagens/prod_1774987446572/0.jpg" alt="Troféu Ouro da Terra - Expositor de Grãos">
       
       <span class="cod">cod. TRou-01</span>
@@ -667,7 +905,7 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       <div class="card-prices">
         
         
-        <div class="price-main">R$ 288,90</div>
+        <div class="price-main price-main-varejo">R$ 288,90</div>
         
         <div class="price-atac-row"><span class="atac-tag">atac. +5un</span><strong class="price-atac-val">R$ 245,90</strong></div>
       
@@ -678,8 +916,35 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu pesca baixo" data-cat="troféus e placas › troféu pescaria" data-sku="trp-001">
-    <div class="card-img" onclick="abrirGaleria(12)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-0-1777412222420.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-1-1777412500393.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-2-1777412531907.jpg"]' data-nome="Troféu Pesca Baixo">
+  <div class="card" data-nome="troféu pesca acrílico - modelo anzol" data-cat="troféus e placas › troféu pescaria" data-catpai="troféus e placas" data-sku="7230">
+    <div class="card-img" onclick="abrirGaleria(16)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7230-studio-1785766820488-0.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7230-studio-1785766822505-1.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7230-studio-1785766824666-2.jpg"]' data-nome="Troféu Pesca Acrílico - Modelo Anzol">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/7230-studio-1785766820488-0.jpg" alt="Troféu Pesca Acrílico - Modelo Anzol">
+      
+      <span class="cod">cod. 7230</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas › Troféu Pescaria</div>
+      <div class="card-name">Troféu Pesca Acrílico - Modelo Anzol</div>
+      <ul class="card-desc"><li>Tripla camada em Acrílico</li><li>Anzol em Acrílico Espelhado (diversas cores)</li><li>Escolha seu peixe e as personalizações nas plaquinhas</li><li>Base em MDF 6mm duplo </li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main price-main-varejo">R$ 198,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 169,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="6478bf5e-b92d-42db-9fb4-7c073b3b08cc" data-nome="Troféu Pesca Acrílico - Modelo Anzol" data-sku="7230" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu pesca baixo" data-cat="troféus e placas › troféu pescaria" data-catpai="troféus e placas" data-sku="trp-001">
+    <div class="card-img" onclick="abrirGaleria(17)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-0-1777412222420.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-1-1777412500393.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-2-1777412531907.jpg"]' data-nome="Troféu Pesca Baixo">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-001-0-1777412222420.jpg" alt="Troféu Pesca Baixo">
       
       <span class="cod">cod. TRP-001</span>
@@ -692,7 +957,12 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
     </div>
     <div class="card-footer">
       <div class="card-prices">
-        <div class="price-consulte">Consulte</div>
+        
+        
+        <div class="price-main price-main-varejo">R$ 99,00</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +3un</span><strong class="price-atac-val">R$ 87,90</strong></div>
+      
       </div>
       
       <button class="btn-cart" data-id="e1fbc7eb-7181-41ac-ac7f-ab8cd63513dc" data-nome="Troféu Pesca Baixo" data-sku="TRP-001" onclick="toggleCart(this)">
@@ -700,41 +970,122 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu totem acrílico & mdf amadeirado - base elevada" data-cat="troféus e placas" data-sku="trt-001-v2">
-    <div class="card-img" onclick="abrirGaleria(13)" data-imgs='[]' data-nome="Troféu Totem Acrílico & MDF Amadeirado - Base Elevada">
-      <div class="img-ph">📦</div>
+  <div class="card" data-nome="troféu pesca esportiva mdf - modelo baixo" data-cat="troféus e placas › troféu pescaria" data-catpai="troféus e placas" data-sku="650">
+    <div class="card-img" onclick="abrirGaleria(18)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/abf08c6b-cc87-40b7-84d1-fb7096ded3e0-studio-1785708135437-2.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/abf08c6b-cc87-40b7-84d1-fb7096ded3e0-studio-1785708135134-1.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/abf08c6b-cc87-40b7-84d1-fb7096ded3e0-studio-1785708133994-0.jpg"]' data-nome="Troféu Pesca Esportiva MDF - Modelo Baixo">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/abf08c6b-cc87-40b7-84d1-fb7096ded3e0-studio-1785708135437-2.jpg" alt="Troféu Pesca Esportiva MDF - Modelo Baixo">
       
-      <span class="cod">cod. TRT-001-V2</span>
-      
+      <span class="cod">cod. 650</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
     </div>
     <div class="card-body">
-      <div class="card-cat">Troféus e Placas</div>
-      <div class="card-name">Troféu Totem Acrílico & MDF Amadeirado - Base Elevada</div>
-      <ul class="card-desc"><li>Em MDF 6mm Amadeirado</li><li>Acrílico com impressão retroversa</li><li>Base alta em MDF</li></ul>
+      <div class="card-cat">Troféus e Placas › Troféu Pescaria</div>
+      <div class="card-name">Troféu Pesca Esportiva MDF - Modelo Baixo</div>
+      <ul class="card-desc"><li>Em MDF 6mm + Acrilico</li><li>Escolha entre diversos exemplares de peixes</li><li>Plaquinha central personalizavel colorida</li><li>Personalização na base inclusa</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main price-main-varejo">R$ 87,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 74,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="abf08c6b-cc87-40b7-84d1-fb7096ded3e0" data-nome="Troféu Pesca Esportiva MDF - Modelo Baixo" data-sku="650" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu pesca madeira dupla camada" data-cat="troféus e placas › troféu pescaria" data-catpai="troféus e placas" data-sku="trp-002">
+    <div class="card-img" onclick="abrirGaleria(19)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-0-1779363969041.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-1-1779363975660.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-2-1779364028051.jpg"]' data-nome="Troféu Pesca Madeira Dupla Camada">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-002-0-1779363969041.jpg" alt="Troféu Pesca Madeira Dupla Camada">
+      
+      <span class="cod">cod. TRP-002</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas › Troféu Pescaria</div>
+      <div class="card-name">Troféu Pesca Madeira Dupla Camada</div>
+      <ul class="card-desc"><li>Estrutura em MDF ou Acrílico 3mm</li><li>Base em madeira Teca</li><li>Aplique em segunda camada do seu peixe</li><li>Impressão direta colorida</li></ul>
     </div>
     <div class="card-footer">
       <div class="card-prices">
         <table class="price-tbl">
         <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
         <tr class="">
-          <td class="ptbl-size">M: 24x17cm</td>
-          <td class="ptbl-avulso">R$ 142,90</td>
-          <td class="ptbl-atac">R$ 121,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-size">em MDF</td>
+          <td class="ptbl-avulso">R$ 94,90</td>
+          <td class="ptbl-atac">R$ 80,90<span class="atac-min"> +3un</span></td>
         </tr><tr class="ptbl-last">
-          <td class="ptbl-size">G: 30x24cm</td>
-          <td class="ptbl-avulso">R$ 217,90</td>
-          <td class="ptbl-atac">R$ 185,90<span class="atac-min"> +10un</span></td>
+          <td class="ptbl-size">em Acrílico</td>
+          <td class="ptbl-avulso">R$ 126,90</td>
+          <td class="ptbl-atac">R$ 107,90<span class="atac-min"> +3un</span></td>
         </tr>
       </table>
       </div>
       
-      <button class="btn-cart" data-id="prod_1775672338556" data-nome="Troféu Totem Acrílico & MDF Amadeirado - Base Elevada" data-sku="TRT-001-V2" onclick="toggleCart(this)">
+      <button class="btn-cart" data-id="610b6a20-67c0-4109-8948-a2609d3be877" data-nome="Troféu Pesca Madeira Dupla Camada" data-sku="TRP-002" onclick="toggleCart(this)">
         Quero esse
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu vanguard ouro" data-cat="troféus e placas" data-sku="ta2-002">
-    <div class="card-img" onclick="abrirGaleria(14)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-0-1778240931283.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-1-1778240950991.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-2-1778240955705.jpg"]' data-nome="Troféu Vanguard Ouro">
+  <div class="card" data-nome="troféu pesca promo 6mm" data-cat="troféus e placas › troféu pescaria" data-catpai="troféus e placas" data-sku="trp-005">
+    <div class="card-img" onclick="abrirGaleria(20)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-0-1779385020549.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-1-1779385032551.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-2-1779385044982.jpg"]' data-nome="Troféu Pesca Promo 6mm">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRP-005-0-1779385020549.jpg" alt="Troféu Pesca Promo 6mm">
+      
+      <span class="cod">cod. TRP-005</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas › Troféu Pescaria</div>
+      <div class="card-name">Troféu Pesca Promo 6mm</div>
+      <ul class="card-desc"><li>Estrutura em MDF 6mm </li><li>Base em MDF 6mm</li><li>Impressão Colorida Direta</li><li>Personalize o peixe, logo  e dizeres</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main price-main-varejo">R$ 70,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +15un</span><strong class="price-atac-val">R$ 60,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="8152a7be-370c-4ef9-8070-cb38d527c420" data-nome="Troféu Pesca Promo 6mm" data-sku="TRP-005" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu totem acrílico + madeira" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="tam-003">
+    <div class="card-img" onclick="abrirGaleria(21)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-0-1778245540300.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-1-1778245548233.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-2-1778245557533.jpg"]' data-nome="Troféu Totem Acrílico + Madeira">
+      <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TAM-003-0-1778245540300.jpg" alt="Troféu Totem Acrílico + Madeira">
+      
+      <span class="cod">cod. TAM-003</span>
+      <div class="img-dots"><span class="img-dot img-dot-active"></span><span class="img-dot"></span><span class="img-dot"></span></div>
+    </div>
+    <div class="card-body">
+      <div class="card-cat">Troféus e Placas</div>
+      <div class="card-name">Troféu Totem Acrílico + Madeira</div>
+      <ul class="card-desc"><li>Em acrílico 10mm</li><li>Apoio em madeira Pinus ou Teca</li><li>Personalização à laser ou Placa acrílilico</li><li>Tamanho 15x23cm</li></ul>
+    </div>
+    <div class="card-footer">
+      <div class="card-prices">
+        
+        
+        <div class="price-main price-main-varejo">R$ 169,90</div>
+        
+        <div class="price-atac-row"><span class="atac-tag">atac. +10un</span><strong class="price-atac-val">R$ 144,90</strong></div>
+      
+      </div>
+      
+      <button class="btn-cart" data-id="51e4d09d-1f72-4ea7-92cd-4622839be201" data-nome="Troféu Totem Acrílico + Madeira" data-sku="TAM-003" onclick="toggleCart(this)">
+        Quero esse
+      </button>
+    </div>
+  </div>
+  <div class="card" data-nome="troféu vanguard ouro" data-cat="troféus e placas" data-catpai="troféus e placas" data-sku="ta2-002">
+    <div class="card-img" onclick="abrirGaleria(22)" data-imgs='["https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-0-1778240931283.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-1-1778240950991.jpg","https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-2-1778240955705.jpg"]' data-nome="Troféu Vanguard Ouro">
       <img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TA2-002-0-1778240931283.jpg" alt="Troféu Vanguard Ouro">
       
       <span class="cod">cod. TA2-002</span>
@@ -766,43 +1117,14 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
       </button>
     </div>
   </div>
-  <div class="card" data-nome="troféu vertice dupla - acrílico" data-cat="troféus e placas" data-sku="trm-001-v2">
-    <div class="card-img" onclick="abrirGaleria(15)" data-imgs='[]' data-nome="Troféu Vertice Dupla - Acrílico">
-      <div class="img-ph">📦</div>
-      
-      <span class="cod">cod. TRM-001-V2</span>
-      
-    </div>
-    <div class="card-body">
-      <div class="card-cat">Troféus e Placas</div>
-      <div class="card-name">Troféu Vertice Dupla - Acrílico</div>
-      <ul class="card-desc"><li>M: Acrílico 3mm; G: Acrílico 5mm</li><li>2 camadas com impressão retroversa</li><li>Base em madeira Pinus ou Teca</li></ul>
-    </div>
-    <div class="card-footer">
-      <div class="card-prices">
-        <table class="price-tbl">
-        <tr><th class="th-size">Var.</th><th class="th-avulso">Varejo</th><th class="th-atac">Atac.</th></tr>
-        <tr class="">
-          <td class="ptbl-size">M: 24x15</td>
-          <td class="ptbl-avulso">R$ 159,90</td>
-          <td class="ptbl-atac">R$ 135,90<span class="atac-min"> +10un</span></td>
-        </tr><tr class="ptbl-last">
-          <td class="ptbl-size">G: 30x18</td>
-          <td class="ptbl-avulso">R$ 248,90</td>
-          <td class="ptbl-atac">R$ 211,90<span class="atac-min"> +10un</span></td>
-        </tr>
-      </table>
       </div>
-      
-      <button class="btn-cart" data-id="c02c6874-c434-41c5-a7c8-f4ea0c69c376" data-nome="Troféu Vertice Dupla - Acrílico" data-sku="TRM-001-V2" onclick="toggleCart(this)">
-        Quero esse
-      </button>
     </div>
-  </div>
   </div>
 </div>
 
+
 <div class="strip">
+
   <div>
     <h2>Não encontrou? Calma!</h2>
     <p>Temos muitos outros produtos! Diversas soluções com projeto e envio em menos de 24h.</p>
@@ -878,26 +1200,200 @@ document.addEventListener("DOMContentLoaded",function(){
     });
   });
 });
+// catTree data (injected at build time for mobile sub-chips)
+var CATTREE_CLIENT = {"Troféus e Placas":{"count":22,"img":"https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/TRE-001-studio-1786463186330-0.jpg","subs":{"Troféu Pescaria":5}},"MDF e Outros":{"count":1,"img":"https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/POM-003-0-1781899735498.jpg","subs":{}}};
+var verMaisLimit=Infinity;
 var catAtiva="";
+var catPaiAtiva="";
+var catSubAtiva="";
 function norm(s){return(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();}
 function render(){
   var busca=norm(document.getElementById("searchInput").value);
-  var cards=document.querySelectorAll(".card"),v=0;
+  var cards=document.querySelectorAll(".card"),matched=[];
+  cards.forEach(function(c){c.style.display="none";});
   cards.forEach(function(c){
-    var ok=(!catAtiva||c.dataset.cat===catAtiva)&&(!busca||norm(c.dataset.nome).includes(busca)||norm(c.dataset.sku).includes(busca));
-    c.style.display=ok?"":"none";if(ok)v++;
+    // catAtiva="" → todos; "facas" → pai match; "facas › conjuntos" → exact sub match
+    var ok=(catAtiva===""||
+             (catSubAtiva===""&&c.dataset.catpai===catPaiAtiva)||
+             (catSubAtiva!==""&&c.dataset.cat===(catPaiAtiva+" › "+catSubAtiva)))&&
+           (!busca||norm(c.dataset.nome).includes(busca)||norm(c.dataset.sku).includes(busca));
+    if(ok)matched.push(c);
   });
-  var g=document.getElementById("grid"),e=g.querySelector(".empty-dyn");
-  if(v===0&&cards.length>0){if(!e){var d=document.createElement("div");d.className="empty empty-dyn";d.innerHTML='<div class="empty-icon">🔍</div><p>Nenhum produto encontrado.</p>';g.appendChild(d);}}
+  matched.forEach(function(c,i){if(i<verMaisLimit)c.style.display="";});
+  var g=document.getElementById("grid");
+  var e=g.querySelector(".empty-dyn");
+  if(matched.length===0&&cards.length>0){if(!e){var d=document.createElement("div");d.className="empty empty-dyn";d.innerHTML='<div class="empty-icon">🔍</div><p>Nenhum produto encontrado.</p>';g.appendChild(d);}}
   else if(e){e.remove();}
+  var vm=g.querySelector(".ver-mais-wrap");
+  if(matched.length>verMaisLimit){
+    if(!vm){vm=document.createElement("div");vm.className="ver-mais-wrap";vm.innerHTML='<button class="btn-ver-mais" onclick="verMais()"></button>';g.appendChild(vm);}
+    vm.querySelector("button").textContent="Ver mais ("+(matched.length-verMaisLimit)+" restantes)";
+    vm.style.display="";
+  } else {
+    if(vm)vm.style.display="none";
+  }
 }
+function verMais(){verMaisLimit+=12;render();}
+// ── Mapa de ícones por categoria (nome normalizado → SVG path) ─────────────
+var ICON_CAT = {
+  "trofeus e placas": '<path d="M5 2 h6 v5 a3 3 0 0 1-6 0 Z"/><path d="M5 4 H3 a1 1 0 0 0 0 4 h2"/><path d="M11 4 h2 a1 1 0 0 1 0 4 h-2"/><line x1="8" y1="10" x2="8" y2="13"/><line x1="5" y1="13" x2="11" y2="13"/>',
+  "linha churrasco":  '<path d="M8 14 C4 14 3 10 5 7 C5.5 9 7 9.5 7 9.5 C6 7 8 3 8 3 C8 3 11 6 11 9 C11 11.5 9.5 13 8 14 Z"/>',
+  "brindes":          '<rect x="2" y="7" width="12" height="7" rx="1"/><rect x="3" y="4" width="10" height="3" rx="1"/><path d="M8 4 V14"/><path d="M8 4 C8 4 6 2 5 3 C4 4 5.5 4 8 4 C10.5 4 12 4 11 3 C10 2 8 4 8 4"/>',
+  "decoracao":        '<path d="M2 7 L8 2 L14 7 V14 H10 V10 H6 V14 H2 Z"/>',
+  "facas":            '<path d="M3 13 L10 2 L13 4 L6 13"/><line x1="3" y1="13" x2="6" y2="13"/>',
+  "mdf e outros":     '<rect x="2" y="4" width="12" height="8" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="2" y1="10" x2="14" y2="10"/>',
+  "copos e garrafas": '<path d="M4 2 L5.5 14 H10.5 L12 2 Z"/><line x1="4.5" y1="7" x2="11.5" y2="7"/>',
+  "terere e chimarro":'<ellipse cx="8" cy="10" rx="4" ry="3"/><line x1="8" y1="7" x2="8" y2="2"/><path d="M6 3 C6 3 6 1.5 8 1.5 C10 1.5 10 3 10 3"/>',
+  "caixas termicas":  '<rect x="2" y="4" width="12" height="10" rx="1"/><line x1="2" y1="7" x2="14" y2="7"/><line x1="8" y1="9.5" x2="8" y2="12.5"/><line x1="6.5" y1="11" x2="9.5" y2="11"/><line x1="6.7" y1="9.7" x2="9.3" y2="12.3"/><line x1="9.3" y1="9.7" x2="6.7" y2="12.3"/>',
+  "canivetes":        '<rect x="4" y="6" width="8" height="4" rx="1" transform="rotate(-30 8 8)"/><line x1="8" y1="5.5" x2="11" y2="10.5"/>',
+  "petshop":          '<ellipse cx="8" cy="10" rx="3" ry="2.5"/><circle cx="5" cy="6" r="1"/><circle cx="8" cy="5" r="1"/><circle cx="11" cy="6" r="1"/>',
+  "kits diversos":    '<path d="M2 5 L8 2 L14 5 V13 L8 16 L2 13 Z"/><line x1="2" y1="5" x2="14" y2="5"/><line x1="8" y1="2" x2="8" y2="16"/>',
+  "impressos 3d":     '<path d="M2 12 L8 14 L14 12"/><path d="M2 9 L8 11 L14 9"/><path d="M2 6 L8 8 L14 6"/><path d="M2 3 L8 5 L14 3"/>',
+  "tabuas":           '<rect x="1" y="5" width="14" height="6" rx="1"/><line x1="5" y1="5" x2="5" y2="11"/><line x1="11" y1="5" x2="11" y2="11"/>',
+  "_default":         '<path d="M13 2 H6 L3 5 V14 H13 V2 Z"/><polyline points="6 2 6 5 3 5"/>'
+};
+function normCatKey(s){ return (s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase().trim(); }
+function escHtml(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+function escAttr(s){ return (s||"").replace(/"/g,"&quot;"); }
+
+     // só o sub ativo (ou "")
+
+// ── Atualiza nav sidebar desktop ──────────────────────────────────────────
+function atualizarNavDesktop(){
+  // "Todos" item
+  var navAll=document.getElementById("navItemAll");
+  if(navAll) navAll.classList.toggle("active",catAtiva==="");
+  // pais
+  document.querySelectorAll("[data-navpai]").forEach(function(b){
+    var p=b.getAttribute("data-navpai");
+    b.classList.toggle("active",p===catPaiAtiva&&catSubAtiva==="");
+  });
+  // subs
+  document.querySelectorAll("[data-navsub]").forEach(function(b){
+    var s=b.getAttribute("data-navsub");
+    var ps=b.getAttribute("data-navpaisub");
+    b.classList.toggle("active",s===catSubAtiva&&ps===catPaiAtiva);
+  });
+  // breadcrumb
+  var bc=document.getElementById("catBreadcrumb");
+  var bt=document.getElementById("catBreadTitle");
+  var bs=document.getElementById("catBreadSub");
+  if(bc&&bt&&bs){
+    if(catAtiva===""){
+      bc.style.display="none";
+    } else {
+      bc.style.display="block";
+      bt.textContent=catSubAtiva?(catPaiAtiva+" › "+catSubAtiva):(catPaiAtiva+" — todos");
+      bs.textContent="";
+    }
+  }
+}
+
+// ── filtrar(cat): cat = "" (todos) | "Facas" (pai) | "Facas › Conjuntos" (sub) ─
 function filtrar(cat){
   catAtiva=cat.toLowerCase();
-  document.querySelectorAll(".f-btn").forEach(function(b){b.classList.toggle("active",b.textContent.toLowerCase()===catAtiva);});
-  var allBtn=document.querySelector(".f-btn-all");
-  if(allBtn)allBtn.classList.toggle("active",catAtiva==="");
+  // derivar pai e sub
+  if(catAtiva===""){
+    catPaiAtiva=""; catSubAtiva="";
+  } else {
+    var parts=catAtiva.split(" › ").map(function(s){return s.trim();});
+    catPaiAtiva=parts[0]||""; catSubAtiva=parts[1]||"";
+  }
+  verMaisLimit=Infinity;
+  atualizarNavDesktop();
   render();
 }
+
+// ── filtrarPai(pai): filtra todos do pai (inclusive subs) no desktop ──────
+function filtrarPai(pai){
+  filtrar(pai);
+}
+
+// ── Mobile: abrirCategoria(pai) ───────────────────────────────────────────
+function abrirCategoria(pai){
+  var landing=document.getElementById("catLanding");
+  var backBar=document.getElementById("catBackBar");
+  var subChips=document.getElementById("catSubChips");
+  var backTitle=document.getElementById("catBackTitle");
+  if(pai==="__todos__"){
+    catAtiva=""; catPaiAtiva=""; catSubAtiva="";
+  } else {
+    catAtiva=pai.toLowerCase(); catPaiAtiva=catAtiva; catSubAtiva="";
+  }
+  if(landing) landing.style.display="none";
+  if(backBar) backBar.classList.add("visible");
+  // sub-chips
+  if(subChips&&pai!=="__todos__"){
+    var catInfo=CATTREE_CLIENT[catPaiAtiva];
+    var subs=catInfo?Object.keys(catInfo.subs):[];
+    if(subs.length>0){
+      subChips.style.display="flex";
+      subChips.innerHTML=subs.map(function(sub){
+        return '<button class="cat-sub-chip" onclick="filtrarSubMobile(' + escAttr(JSON.stringify(catPaiAtiva)) + ',' + escAttr(JSON.stringify(sub)) + ')" data-sub="'+sub.toLowerCase().replace(/"/g,'')+'">'+escHtml(sub)+'</button>';
+      }).join('');
+    } else {
+      subChips.style.display="none";
+    }
+  } else {
+    if(subChips) subChips.style.display="none";
+  }
+  if(backTitle){
+    backTitle.innerHTML=pai==="__todos__"?"Todos":("<span>"+escHtml(pai)+"</span>");
+  }
+  verMaisLimit=Infinity;
+  render();
+}
+
+// ── Mobile: filtrar sub (atualiza chips) ──────────────────────────────────
+function filtrarSubMobile(pai,sub){
+  catAtiva=(pai+" › "+sub).toLowerCase();
+  catPaiAtiva=pai.toLowerCase(); catSubAtiva=sub.toLowerCase();
+  document.querySelectorAll(".cat-sub-chip").forEach(function(b){
+    b.classList.toggle("active",b.getAttribute("data-sub")===sub.toLowerCase());
+  });
+  verMaisLimit=Infinity;
+  render();
+}
+
+// ── Mobile: voltar para landing ───────────────────────────────────────────
+function voltarCategorias(){
+  var landing=document.getElementById("catLanding");
+  var backBar=document.getElementById("catBackBar");
+  var subChips=document.getElementById("catSubChips");
+  if(landing) landing.style.display="";
+  if(backBar) backBar.classList.remove("visible");
+  if(subChips) subChips.style.display="none";
+  catAtiva=""; catPaiAtiva=""; catSubAtiva="";
+  verMaisLimit=Infinity;
+  render();
+}
+
+// ── Busca → esconde landing mobile, mostra grid ───────────────────────────
+function onBuscaInput(){
+  verMaisLimit=Infinity;
+  var busca=document.getElementById("searchInput").value;
+  if(busca.trim()){
+    // Busca ativa: esconder landing, mostrar grid
+    var landing=document.getElementById("catLanding");
+    var backBar=document.getElementById("catBackBar");
+    if(landing&&landing.style.display!=="none"){ landing.style.display="none"; }
+    if(backBar&&!backBar.classList.contains("visible")){ backBar.classList.add("visible"); }
+    var bt=document.getElementById("catBackTitle");
+    if(bt) bt.innerHTML="Busca";
+  }
+  render();
+}
+function setGrid(val){
+  val=parseInt(val);
+  document.getElementById("grid").style.gridTemplateColumns="repeat("+val+",1fr)";
+  document.getElementById("gridColLabel").textContent="⊞ "+val;
+}
+(function(){
+  var saved=localStorage.getItem("ph_grid_cols");
+  if(saved){var s=document.getElementById("gridSlider");if(s){s.value=saved;setGrid(saved);}}
+  document.getElementById("gridSlider").addEventListener("change",function(){localStorage.setItem("ph_grid_cols",this.value);});
+  render();
+})();
 var lbImgs=[],lbIdx=0;
 function abrirGaleria(pidx){
   var el=document.querySelectorAll(".card")[pidx];
@@ -972,6 +1468,32 @@ function enviarPedido(){
   location.href="https://wa.me/556696694241?text="+encodeURIComponent(msg);
 }
 document.addEventListener("keydown",function(e){if(e.key==="Escape")fecharLightbox();});
+</script>
+
+<script>
+/* ── Expiração de ofertas com data-oferta-fim ── */
+document.addEventListener("DOMContentLoaded", function() {
+  var agora = new Date();
+  document.querySelectorAll('[data-oferta-fim]').forEach(function(promRow) {
+    var iso = promRow.getAttribute('data-oferta-fim');
+    if (!iso) return;
+    var fim = new Date(iso + 'T23:59:59');
+    if (fim >= agora) return; // ainda válida
+    // Oferta expirada: ocultar a linha de oferta
+    promRow.style.display = 'none';
+    // Restaurar o preço principal (remover line-through)
+    var card = promRow.closest('.card-prices') || promRow.parentElement;
+    if (card) {
+      var mainPrice = card.querySelector('.price-main-varejo');
+      if (mainPrice) {
+        mainPrice.style.textDecoration = '';
+        mainPrice.style.color = '';
+        mainPrice.style.fontSize = '';
+        mainPrice.style.fontWeight = '';
+      }
+    }
+  });
+});
 </script>
 </body>
 </html>
