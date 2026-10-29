@@ -35,6 +35,42 @@ nav a:hover{color:var(--bk);}
 .btn-wpp-hero{display:inline-flex;align-items:center;gap:8px;background:var(--wpp);color:#fff;padding:14px 28px;border-radius:14px;font-weight:700;font-size:var(--t-sm);text-decoration:none;width:fit-content;}
 .btn-wpp-hero:hover{background:var(--wpp-hover);}
 
+/* NOVIDADES DA SEMANA (carrossel) */
+.nov{position:relative;background:var(--bk);color:#fff;overflow:hidden;}
+.nov-slides{display:grid;}
+.nov-slide{grid-area:1/1;display:flex;align-items:center;gap:3rem;padding:44px 8%;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s;}
+.nov-slide.nov-on{opacity:1;visibility:visible;}
+.nov-img{flex:0 0 380px;height:300px;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.5);background:#1d1d1f;}
+.nov-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.nov-info{flex:1;display:flex;flex-direction:column;gap:.9rem;min-width:0;}
+.nov-selo{align-self:flex-start;background:var(--y);color:var(--bk);font-size:var(--t-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:999px;}
+.nov-titulo{font-size:var(--t-hero);font-weight:800;letter-spacing:-.02em;line-height:1.1;color:#fff;}
+.nov-nome{font-size:var(--t-base);font-weight:600;color:rgba(255,255,255,.7);}
+.nov-preco{font-size:1.8rem;font-weight:800;letter-spacing:-.03em;color:var(--y);}
+.nov-preco s{font-size:var(--t-base);font-weight:600;color:rgba(255,255,255,.5);margin-right:8px;}
+.nov-preco small{font-size:var(--t-sm);font-weight:600;color:rgba(255,255,255,.7);margin-right:6px;letter-spacing:0;}
+.nov-btn{display:inline-flex;align-items:center;gap:8px;background:var(--wpp);color:#fff;padding:14px 28px;border-radius:14px;font-weight:700;font-size:var(--t-sm);text-decoration:none;width:fit-content;}
+.nov-btn:hover{background:var(--wpp-hover);}
+.nov-arrow{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.14);color:#fff;font-size:1.3rem;font-weight:700;cursor:pointer;z-index:2;line-height:1;}
+.nov-arrow:hover{background:var(--y);color:var(--bk);}
+.nov-prev{left:14px;}.nov-next{right:14px;}
+.nov-dots{display:flex;justify-content:center;gap:8px;padding:0 0 18px;}
+.nov-dot{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:rgba(255,255,255,.35);cursor:pointer;}
+.nov-dot.nov-on{background:var(--y);width:24px;border-radius:6px;}
+@media(max-width:768px){
+  .nov-slide{flex-direction:column;align-items:stretch;gap:1.1rem;padding:28px 20px 18px;}
+  .nov-img{flex:none;width:100%;height:220px;border-radius:14px;}
+  .nov-arrow{display:none;}
+  .nov-preco{font-size:1.5rem;}
+}
+@media(prefers-reduced-motion:reduce){.nov-slide{transition:none;}}
+@media print{
+  .nov-slide{display:none;transition:none;}
+  .nov-slide:first-child{display:flex;opacity:1;visibility:visible;padding:16px 5%;break-inside:avoid;page-break-inside:avoid;}
+  .nov-img{height:160px;flex-basis:240px;box-shadow:none;}
+  .nov-arrow,.nov-dots,.nov-btn{display:none !important;}
+}
+
 /* CAT-NAV SIDEBAR (desktop >= 900px) + CAT-LANDING (mobile < 900px) */
 .page-layout{display:flex;align-items:flex-start;max-width:1300px;margin:0 auto;padding:0 5%;}
 .cat-nav{width:190px;flex-shrink:0;position:sticky;top:130px;padding-right:12px;display:none;}
@@ -290,13 +326,47 @@ footer{background:var(--wh);padding:60px 5%;display:grid;grid-template-columns:r
   </nav>
 </header>
 
-
-<div class="hero">
-  <div>
-    <div class="hero-title">Inovação Entalhe<br><em>Produtos com identidade.</em></div>
-    <div class="hero-count">297 produtos disponíveis</div>
+<section class="nov" id="novBanner" aria-label="Novidades da semana">
+  <div class="nov-slides"><div class="nov-slide nov-on">
+  <div class="nov-img"><img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/3543d9e5-0a6a-43fd-b7dd-43d13ea468ff-studio-1792763938561-1.jpg" alt="Troféu Corporativo Pinguim Jotun"></div>
+  <div class="nov-info">
+    <span class="nov-selo">Novidade da semana</span>
+    <div class="nov-titulo">Troféu Pinguim Jotun em acrílico preto espelhado ✨</div>
+    <div class="nov-nome">Troféu Corporativo Pinguim Jotun</div>
+    <div class="nov-preco"><small>a partir de</small>R$ 185,90</div>
+    <a class="nov-btn" href="https://wa.me/556696694241?text=Ol%C3%A1!%20Tenho%20interesse%20no%20produto%3A%20Trof%C3%A9u%20Corporativo%20Pinguim%20Jotun%20(cod.%20TRF-0100)" target="_blank">💬 Quero este produto</a>
   </div>
 </div>
+<div class="nov-slide">
+  <div class="nov-img"><img src="https://jttohhkgxjzgceokwvhf.supabase.co/storage/v1/object/public/produtos/53a1b56a-6931-423e-9cb6-d49bfe2fa388/EPA-0001-0-1792705066380.jpg" alt="Estojo Porta Ampola"></div>
+  <div class="nov-info">
+    <span class="nov-selo">Novidade da semana</span>
+    <div class="nov-titulo">Conheça o novo Estojo Porta Ampola em impressão 3D</div>
+    <div class="nov-nome">Estojo Porta Ampola</div>
+    <div class="nov-preco">R$ 19,90</div>
+    <a class="nov-btn" href="https://wa.me/556696694241?text=Ol%C3%A1!%20Tenho%20interesse%20no%20produto%3A%20Estojo%20Porta%20Ampola%20(cod.%20EPA-0001)" target="_blank">💬 Quero este produto</a>
+  </div>
+</div></div>
+  <button class="nov-arrow nov-prev" type="button" aria-label="Anterior" onclick="novStep(-1)">‹</button>
+  <button class="nov-arrow nov-next" type="button" aria-label="Próximo" onclick="novStep(1)">›</button>
+  <div class="nov-dots"><button class="nov-dot nov-on" type="button" aria-label="Slide 1" onclick="novGo(0)"></button><button class="nov-dot" type="button" aria-label="Slide 2" onclick="novGo(1)"></button></div>
+</section>
+<script>(function(){
+var root=document.getElementById("novBanner");if(!root)return;
+var slides=root.querySelectorAll(".nov-slide"),dots=root.querySelectorAll(".nov-dot"),n=slides.length,i=0,timer=null;
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function go(k){i=(k+n)%n;for(var j=0;j<n;j++){slides[j].classList.toggle("nov-on",j===i);if(dots[j])dots[j].classList.toggle("nov-on",j===i);}}
+function play(){stop();if(n<2||reduce)return;timer=setInterval(function(){go(i+1);},4000);}
+function stop(){if(timer){clearInterval(timer);timer=null;}}
+window.novGo=function(k){go(k);play();};
+window.novStep=function(d){go(i+d);play();};
+root.addEventListener("mouseenter",stop);root.addEventListener("mouseleave",play);
+var x0=null;
+root.addEventListener("touchstart",function(e){x0=e.touches[0].clientX;stop();},{passive:true});
+root.addEventListener("touchend",function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>40)go(i+(dx<0?1:-1));play();},{passive:true});
+go(0);play();
+})();</script>
+
 
 
 <!-- SEARCH BAR (shared) -->
